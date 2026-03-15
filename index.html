@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Espaço Invisível FF 2026 - Letra Fantasma e Símbolos de Cria</title>
-<link rel="icon" type="image/png" href="logo-cria.png">
-<link rel="apple-touch-icon" href="logo-cria.png">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2300f2fe%22>⚡</text></svg>">
     
     <meta name="description" content="O melhor gerador de espaço invisível para nick do Free Fire. Copie o código invisível, símbolos de Pro-Players e letras pequenas.">
     
@@ -145,7 +145,6 @@
             <div class="pro-card" onclick="copyText('⚡')"><span class="pro-name">Raio</span><span class="pro-symbol">⚡</span></div>
             <div class="pro-card" onclick="copyText('亗')"><span class="pro-name">Coroa</span><span class="pro-symbol">亗</span></div>
             <div class="pro-card" onclick="copyText('†')"><span class="pro-name">Cruz</span><span class="pro-symbol">†</span></div>
-            <div class="pro-card" onclick="copyText('')"><span class="pro-name">Apple</span><span class="pro-symbol"></span></div>
             <div class="pro-card" onclick="copyText('〆')"><span class="pro-name">Ninja</span><span class="pro-symbol">〆</span></div>
             <div class="pro-card" onclick="copyText('︻╦̵̵͇̿̿̿̿╤──')"><span class="pro-name">Sniper</span><span class="pro-symbol">︻╦̵̵͇̿</span></div>
             <div class="pro-card" onclick="copyText('▬▬ι═══════ﺤ')"><span class="pro-name">Katana</span><span class="pro-symbol">ι══ﺤ</span></div>
@@ -173,10 +172,6 @@
         <div class="faq-item">
             <h4>O espaço invisível dá banimento?</h4>
             <p>Não. O caractere invisível é um código Unicode (U+3164) oficial e permitido pelos sistemas Android e iOS, não infringindo as regras da Garena em 2026.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Por que o símbolo da Apple não aparece para mim?</h4>
-            <p>O símbolo da maçã () é exclusivo de dispositivos Apple. Se você usa Android, verá um quadrado, mas ao copiar e colar no nick, ele aparecerá para todos os jogadores que usam iPhone.</p>
         </div>
         <div class="faq-item">
             <h4>Como colocar letras pequenas no topo do nick?</h4>
@@ -241,8 +236,8 @@
     // Gestão de Modais Legais
     function openModal(type) {
         const content = {
-            privacy: "<h2>Política de Privacidade</h2><p>Este site utiliza cookies do Google AdSense para processar dados de navegação e exibir anúncios personalizados. Não coletamos informações pessoais como nomes, e-mails ou números de telefone. O uso desta ferramenta é anônimo.</p>",
-            terms: "<h2>Termos de Uso</h2><p>O Gerador de Espaço Invisível fornece caracteres Unicode públicos. O uso desses símbolos em jogos é de responsabilidade do usuário. Não garantimos que as empresas de jogos não alterem suas regras de nicks no futuro. A cópia do código fonte para fins comerciais é proibida.</p>"
+            privacy: "<h2>Política de Privacidade</h2><p>Este site utiliza cookies do Google AdSense para processar dados de navegação e exibir anúncios personalizados. Não coletamos informações pessoais. O uso desta ferramenta é anônimo.</p>",
+            terms: "<h2>Termos de Uso</h2><p>O Gerador de Espaço Invisível fornece caracteres Unicode públicos. O uso desses símbolos em jogos é de responsabilidade do usuário. A cópia do código fonte para fins comerciais é proibida.</p>"
         };
         document.getElementById('modalContent').innerHTML = content[type];
         document.getElementById('legalModal').style.display = "block";
