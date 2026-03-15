@@ -1,0 +1,17 @@
+{
+  "name": "Espaço Invisível Pro",
+  "short_name": "Nicks FF",
+  "description": "Gerador de espaços e símbolos para Free Fire",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f0c29",
+  "theme_color": "#00f2fe",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2859/2859731.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
