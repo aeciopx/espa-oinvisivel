@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Espaço Invisível FF 2026 - Letra Fantasma e Símbolos de Cria</title>
+    <meta name="description" content="O melhor gerador de espaço invisível para nick do Free Fire. Copie o código invisível, símbolos de Pro-Players e letras pequenas.">
+    
+    <meta name="theme-color" content="#00f2fe">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        /* Design Gamer Vibrante */
+        body {
+            margin: 0; padding: 0; font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
+            background-size: 400% 400%; animation: gradient 15s ease infinite;
+            color: white; display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .main-container {
+            width: 95%; max-width: 850px;
+            background: rgba(0, 0, 0, 0.85);
+            margin: 20px 10px; padding: 30px;
+            border-radius: 30px; backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            box-sizing: border-box; text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* Botão Instalar App */
+        #installBtn {
+            display: none; background: #f9d423; color: #000; border: none;
+            padding: 12px 25px; border-radius: 50px; font-weight: bold;
+            margin-bottom: 20px; cursor: pointer; animation: pulse 2s infinite;
+            box-shadow: 0 0 15px rgba(249, 212, 35, 0.5);
+        }
+        @keyframes pulse { 0% {transform:scale(1)} 50% {transform:scale(1.05)} 100% {transform:scale(1)} }
+
+        h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); color: #00f2fe; text-transform: uppercase; margin: 10px 0; }
+        h2 { font-size: 1.1rem; color: #aaa; font-weight: 400; margin-bottom: 30px; }
+
+        /* Grade de Botões Principais */
+        .btn-main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+        .btn-copy-main { 
+            background: linear-gradient(90deg, #4facfe, #00f2fe); border: none; 
+            padding: 20px; color: #000; font-weight: bold; border-radius: 18px; 
+            cursor: pointer; font-size: 1rem; transition: 0.3s;
+        }
+        .btn-copy-main:hover { transform: translateY(-3px); filter: brightness(1.2); }
+
+        /* Simulador Profissional */
+        .simulator { 
+            background: rgba(255,255,255,0.05); padding: 25px; 
+            border-radius: 20px; border: 1px dashed #4facfe; margin-bottom: 40px; 
+        }
+        input { 
+            width: 100%; padding: 18px; box-sizing: border-box; 
+            background: #000; border: 2px solid #4facfe; color: #00f2fe; 
+            font-size: 1.5rem; text-align: center; border-radius: 15px; 
+            outline: none; transition: 0.3s;
+        }
+        input:focus { box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); }
+        .small-output { 
+            margin-top: 20px; color: #f9d423; font-weight: bold; cursor: pointer; 
+            display: block; border: 1px solid #f9d423; padding: 15px; 
+            border-radius: 10px; background: rgba(249, 212, 35, 0.1); 
+            transition: 0.3s;
+        }
+        .small-output:hover { background: rgba(249, 212, 35, 0.2); }
+
+        /* Biblioteca de Símbolos */
+        .pro-section { margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 25px; }
+        .pro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 12px; margin-top: 20px; }
+        .pro-card { 
+            background: #111; padding: 15px 5px; border-radius: 15px; 
+            cursor: pointer; border: 1px solid #333; transition: 0.2s; 
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .pro-card:hover { border-color: #00f2fe; background: #1a1a1a; transform: translateY(-5px); }
+        .pro-name { font-size: 0.65rem; color: #777; text-transform: uppercase; margin-bottom: 6px; }
+        .pro-symbol { font-size: 1.2rem; color: #fff; }
+
+        /* Tutorial e FAQ (SEO) */
+        .seo-box { text-align: left; background: rgba(255,255,255,0.05); padding: 25px; border-radius: 20px; margin-top: 30px; }
+        .step { margin-bottom: 15px; display: flex; align-items: flex-start; }
+        .step-num { background: #00f2fe; color: #000; font-weight: bold; min-width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px; }
+        .faq-item { margin-top: 25px; border-bottom: 1px solid #222; padding-bottom: 15px; }
+        .faq-item h4 { color: #f9d423; margin-bottom: 8px; font-size: 1.1rem; }
+
+        /* Cookies e Modais */
+        #cookie-banner { position: fixed; bottom: 0; width: 100%; background: #fff; color: #000; padding: 15px; display: flex; justify-content: center; align-items: center; z-index: 9999; font-size: 0.85rem; font-weight: bold; }
+        #cookie-banner button { background: #000; color: #fff; border: none; padding: 10px 20px; margin-left: 15px; border-radius: 8px; cursor: pointer; }
+        
+        footer { margin-top: 50px; padding: 30px; width: 100%; border-top: 1px solid #222; text-align: center; }
+        .legal-links a { color: #00f2fe; text-decoration: none; margin: 0 15px; font-size: 0.9rem; }
+
+        .modal { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); overflow:auto; }
+        .modal-content { background:#1e1e1e; margin:10% auto; padding:35px; width:85%; max-width:650px; border-radius:20px; position:relative; color:#ccc; line-height:1.7; }
+        
+        #toast { visibility: hidden; position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); background: #00f2fe; color: #000; padding: 12px 35px; border-radius: 50px; font-weight: bold; z-index: 10001; }
+        #toast.show { visibility: visible; animation: fadein 0.5s; }
+        @keyframes fadein { from {opacity: 0} to {opacity: 1} }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <button id="installBtn">📲 INSTALAR APP DE NICKS</button>
+
+    <h1>Espaço Invisível FF</h1>
+    <h2>Gerador Profissional de Símbolos de Cria e Letra Fantasma 2026</h2>
+
+    <div class="btn-main-grid">
+        <button class="btn-copy-main" onclick="copyText('\u3164')">ESPAÇO GRANDE (COPIAR)</button>
+        <button class="btn-copy-main" onclick="copyText('\u2006')">ESPAÇO PEQUENO (COPIAR)</button>
+    </div>
+
+    <div class="simulator">
+        <p style="margin:0 0 15px 0; font-size: 1rem; color: #00f2fe;">Simulador de Nick & Letras Pequenas</p>
+        <input type="text" id="nickInput" maxlength="12" placeholder="Digite seu nome aqui..." oninput="updateFunctions(this.value)">
+        <p id="count" style="font-size: 0.8rem; color: #666; margin-top: 10px;">0 / 12 caracteres</p>
+        <div id="smallOutputArea" style="display:none;">
+            <span class="small-output" id="smallTextResult" onclick="copyText(this.innerText.replace(' (COPIAR)', ''))"></span>
+        </div>
+    </div>
+
+    <div class="pro-section">
+        <h3>Biblioteca de Símbolos Expandida</h3>
+        <div class="pro-grid">
+            <div class="pro-card" onclick="copyText('Ⓥ')"><span class="pro-name">Oficial</span><span class="pro-symbol">Ⓥ</span></div>
+            <div class="pro-card" onclick="copyText('⚡')"><span class="pro-name">Raio</span><span class="pro-symbol">⚡</span></div>
+            <div class="pro-card" onclick="copyText('亗')"><span class="pro-name">Coroa</span><span class="pro-symbol">亗</span></div>
+            <div class="pro-card" onclick="copyText('†')"><span class="pro-name">Cruz</span><span class="pro-symbol">†</span></div>
+            <div class="pro-card" onclick="copyText('')"><span class="pro-name">Apple</span><span class="pro-symbol"></span></div>
+            <div class="pro-card" onclick="copyText('〆')"><span class="pro-name">Ninja</span><span class="pro-symbol">〆</span></div>
+            <div class="pro-card" onclick="copyText('︻╦̵̵͇̿̿̿̿╤──')"><span class="pro-name">Sniper</span><span class="pro-symbol">︻╦̵̵͇̿</span></div>
+            <div class="pro-card" onclick="copyText('▬▬ι═══════ﺤ')"><span class="pro-name">Katana</span><span class="pro-symbol">ι══ﺤ</span></div>
+            <div class="pro-card" onclick="copyText('☯')"><span class="pro-name">Yin Yang</span><span class="pro-symbol">☯</span></div>
+            <div class="pro-card" onclick="copyText('✿')"><span class="pro-name">Flor</span><span class="pro-symbol">✿</span></div>
+            <div class="pro-card" onclick="copyText('ʚĭɞ')"><span class="pro-name">Borboleta</span><span class="pro-symbol">ʚĭɞ</span></div>
+            <div class="pro-card" onclick="copyText('♆')"><span class="pro-name">Tridente</span><span class="pro-symbol">♆</span></div>
+            <div class="pro-card" onclick="copyText('⚝')"><span class="pro-name">Estrela</span><span class="pro-symbol">⚝</span></div>
+            <div class="pro-card" onclick="copyText('☁')"><span class="pro-name">Nuvem</span><span class="pro-symbol">☁</span></div>
+            <div class="pro-card" onclick="copyText('⚡︎')"><span class="pro-name">Raio Fino</span><span class="pro-symbol">⚡︎</span></div>
+            <div class="pro-card" onclick="copyText('')"><span class="pro-name">iPhone</span><span class="pro-symbol"></span></div>
+        </div>
+    </div>
+
+    <div class="seo-box">
+        <h3>Como usar o Espaço Invisível no Free Fire?</h3>
+        <div class="step"><div class="step-num">1</div><p>Escolha entre o <strong>Espaço Invisível Grande</strong> ou <strong>Pequeno</strong> e clique em copiar.</p></div>
+        <div class="step"><div class="step-num">2</div><p>Abra o jogo e vá na opção de alterar seu apelido (Nick).</p></div>
+        <div class="step"><div class="step-num">3</div><p>Cole o caractere invisível entre as letras para separar o nome ou tag de guilda.</p></div>
+        <div class="step"><div class="step-num">4</div><p>Salve a alteração. O jogo aceitará o código como um espaço real!</p></div>
+    </div>
+
+    <div class="seo-box">
+        <h3>Perguntas Frequentes (FAQ)</h3>
+        <div class="faq-item">
+            <h4>O espaço invisível dá banimento?</h4>
+            <p>Não. O caractere invisível é um código Unicode (U+3164) oficial e permitido pelos sistemas Android e iOS, não infringindo as regras da Garena em 2026.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Por que o símbolo da Apple não aparece para mim?</h4>
+            <p>O símbolo da maçã () é exclusivo de dispositivos Apple. Se você usa Android, verá um quadrado, mas ao copiar e colar no nick, ele aparecerá para todos os jogadores que usam iPhone.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Como colocar letras pequenas no topo do nick?</h4>
+            <p>Basta digitar seu nome no nosso simulador acima. O sistema converterá automaticamente para letras pequenas (subscrito), pronto para você copiar.</p>
+        </div>
+    </div>
+</div>
+
+<div id="cookie-banner">
+    <span>Usamos cookies para anúncios personalizados e análise de tráfego (AdSense).</span>
+    <button onclick="acceptCookies()">ACEITAR COOKIES</button>
+</div>
+
+<footer>
+    <div class="legal-links">
+        <a href="javascript:void(0)" onclick="openModal('privacy')">Privacidade</a> | 
+        <a href="javascript:void(0)" onclick="openModal('terms')">Termos de Uso</a>
+    </div>
+    <p style="margin-top:15px; color:#444;">&copy; 2026 Gerador de Nicks de Cria - Ferramenta Gratuita.</p>
+</footer>
+
+<div id="legalModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" style="position:absolute; right:20px; top:10px; cursor:pointer; font-size:30px; color:#ff4a4a;">&times;</span>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<div id="toast">Copiado com sucesso! 🚀</div>
+
+<script>
+    // Função de Cópia
+    function copyText(text) {
+        const el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        
+        var x = document.getElementById("toast");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2500);
+    }
+
+    // Simulador e Conversor de Letras Pequenas
+    function updateFunctions(val) {
+        document.getElementById('count').innerText = val.length + ' / 12 caracteres';
+        const smallMap = {'a':'ᵃ','b':'ᵇ','c':'ᶜ','d':'ᵈ','e':'ᵉ','f':'ᶠ','g':'ᵍ','h':'ʰ','i':'ⁱ','j':'ʲ','k':'ᵏ','l':'ˡ','m':'ᵐ','n':'ⁿ','o':'ᵒ','p':'ᵖ','q':'ᵠ','r':'ʳ','s':'ˢ','t':'ᵗ','u':'ᵘ','v':'ᵛ','w':'ʷ','x':'ˣ','y':'ʸ','z':'ᶻ'};
+        const result = val.toLowerCase().split('').map(char => smallMap[char] || char).join('');
+        const container = document.getElementById('smallOutputArea');
+        if(val.length > 0) {
+            container.style.display = 'block';
+            document.getElementById('smallTextResult').innerText = result + " (COPIAR)";
+        } else { container.style.display = 'none'; }
+    }
+
+    // Gestão de Cookies
+    function acceptCookies() { localStorage.setItem('cookiesAccepted2026', 'true'); document.getElementById('cookie-banner').style.display = 'none'; }
+    if (localStorage.getItem('cookiesAccepted2026')) document.getElementById('cookie-banner').style.display = 'none';
+
+    // Gestão de Modais Legais
+    function openModal(type) {
+        const content = {
+            privacy: "<h2>Política de Privacidade</h2><p>Este site utiliza cookies do Google AdSense para processar dados de navegação e exibir anúncios personalizados. Não coletamos informações pessoais como nomes, e-mails ou números de telefone. O uso desta ferramenta é anônimo.</p>",
+            terms: "<h2>Termos de Uso</h2><p>O Gerador de Espaço Invisível fornece caracteres Unicode públicos. O uso desses símbolos em jogos é de responsabilidade do usuário. Não garantimos que as empresas de jogos não alterem suas regras de nicks no futuro. A cópia do código fonte para fins comerciais é proibida.</p>"
+        };
+        document.getElementById('modalContent').innerHTML = content[type];
+        document.getElementById('legalModal').style.display = "block";
+    }
+    function closeModal() { document.getElementById('legalModal').style.display = "none"; }
+
+    // Instalação PWA
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault(); deferredPrompt = e;
+        document.getElementById('installBtn').style.display = 'inline-block';
+    });
+    document.getElementById('installBtn').addEventListener('click', () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(() => { document.getElementById('installBtn').style.display = 'none'; });
+        }
+    });
+</script>
+
+</body>
+</html>
