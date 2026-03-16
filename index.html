@@ -3,21 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Espaço Invisível FF 2026 - Letra Fantasma e Símbolos de Cria</title>
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%2300f2fe%22>⚡</text></svg>">
-    
-    <meta name="description" content="O melhor gerador de espaço invisível para nick do Free Fire. Copie o código invisível, símbolos de Pro-Players e letras pequenas.">
-    
-    <meta name="theme-color" content="#00f2fe">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Espaço Invisível FF 2026 - Nicks de Cria, Símbolos e Sensi</title>
     <link rel="manifest" href="manifest.json">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-        /* Design Gamer Vibrante */
         body {
             margin: 0; padding: 0; font-family: 'Poppins', sans-serif;
             background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
@@ -25,260 +15,240 @@
             color: white; display: flex; flex-direction: column; align-items: center; min-height: 100vh;
         }
 
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
         .main-container {
-            width: 95%; max-width: 850px;
-            background: rgba(0, 0, 0, 0.85);
-            margin: 20px 10px; padding: 30px;
-            border-radius: 30px; backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 242, 254, 0.3);
-            box-sizing: border-box; text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            width: 95%; max-width: 850px; background: rgba(0, 0, 0, 0.9);
+            margin: 20px 10px; padding: 25px; border-radius: 30px; backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 242, 254, 0.3); box-sizing: border-box; text-align: center;
         }
 
-        /* Botão Instalar App */
-        #installBtn {
-            display: none; background: #f9d423; color: #000; border: none;
-            padding: 12px 25px; border-radius: 50px; font-weight: bold;
-            margin-bottom: 20px; cursor: pointer; animation: pulse 2s infinite;
-            box-shadow: 0 0 15px rgba(249, 212, 35, 0.5);
-        }
-        @keyframes pulse { 0% {transform:scale(1)} 50% {transform:scale(1.05)} 100% {transform:scale(1)} }
+        #installBtn { display: none; background: #f9d423; color: #000; border: none; padding: 15px; border-radius: 50px; font-weight: bold; margin-bottom: 20px; cursor: pointer; width: 100%; box-shadow: 0 0 15px #f9d423; }
 
-        h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); color: #00f2fe; text-transform: uppercase; margin: 10px 0; }
-        h2 { font-size: 1.1rem; color: #aaa; font-weight: 400; margin-bottom: 30px; }
-
-        /* Grade de Botões Principais */
-        .btn-main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
-        .btn-copy-main { 
-            background: linear-gradient(90deg, #4facfe, #00f2fe); border: none; 
-            padding: 20px; color: #000; font-weight: bold; border-radius: 18px; 
-            cursor: pointer; font-size: 1rem; transition: 0.3s;
-        }
-        .btn-copy-main:hover { transform: translateY(-3px); filter: brightness(1.2); }
-
-        /* Hub de Ferramentas */
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0; }
-        .tool-card { background: rgba(255, 255, 255, 0.05); border: 1px solid #333; border-radius: 20px; padding: 20px; text-align: left; }
-        .tool-card h3 { color: #00f2fe; margin-top: 0; font-size: 1.2rem; }
-        .sensi-display { background: #000; padding: 15px; border-radius: 10px; margin: 10px 0; font-family: monospace; color: #f9d423; font-size: 0.9rem; border: 1px solid #4facfe; }
-        .btn-tool { width: 100%; padding: 12px; background: #00f2fe; border: none; border-radius: 10px; color: #000; font-weight: bold; cursor: pointer; }
-        .bio-list { max-height: 120px; overflow-y: auto; margin-top: 10px; background: #000; border-radius: 10px; padding: 5px; }
-        .bio-item { padding: 10px; border-bottom: 1px solid #222; cursor: pointer; font-size: 0.85rem; }
-        .bio-item:hover { color: #00f2fe; }
-
-        /* Simulador */
-        .simulator { 
-            background: rgba(255,255,255,0.05); padding: 25px; 
-            border-radius: 20px; border: 1px dashed #4facfe; margin-bottom: 40px; 
-        }
-        input { 
-            width: 100%; padding: 18px; box-sizing: border-box; 
-            background: #000; border: 2px solid #4facfe; color: #00f2fe; 
-            font-size: 1.5rem; text-align: center; border-radius: 15px; 
-            outline: none; transition: 0.3s;
-        }
-        .small-output { 
-            margin-top: 20px; color: #f9d423; font-weight: bold; cursor: pointer; 
-            display: block; border: 1px solid #f9d423; padding: 15px; 
-            border-radius: 10px; background: rgba(249, 212, 35, 0.1); 
-        }
-
-        /* Biblioteca de Símbolos */
-        .pro-section { margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 25px; }
-        .pro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 12px; margin-top: 20px; }
-        .pro-card { 
-            background: #111; padding: 15px 5px; border-radius: 15px; 
-            cursor: pointer; border: 1px solid #333; transition: 0.2s; 
-            display: flex; flex-direction: column; align-items: center;
-        }
-        .pro-card:hover { border-color: #00f2fe; transform: translateY(-5px); }
-        .pro-name { font-size: 0.65rem; color: #777; text-transform: uppercase; margin-bottom: 6px; }
-        .pro-symbol { font-size: 1.2rem; color: #fff; }
-
-        /* Seção de Texto SEO (O seu texto incorporado) */
-        .seo-box { text-align: left; background: rgba(255,255,255,0.05); padding: 25px; border-radius: 20px; margin-top: 30px; line-height: 1.6; border: 1px solid rgba(255,255,255,0.1); }
-        .seo-box h3 { color: #00f2fe; margin-top: 0; }
-        .seo-box h4 { color: #f9d423; margin-top: 20px; }
-        .dica-ouro { background: rgba(0, 242, 254, 0.1); border-left: 4px solid #00f2fe; padding: 15px; margin-top: 20px; border-radius: 5px; }
-
-        /* Cookies e Modais */
-        #cookie-banner { position: fixed; bottom: 0; width: 100%; background: #fff; color: #000; padding: 15px; display: flex; justify-content: center; align-items: center; z-index: 9999; font-size: 0.85rem; font-weight: bold; box-sizing: border-box;}
-        #cookie-banner button { background: #000; color: #fff; border: none; padding: 10px 20px; margin-left: 15px; border-radius: 8px; cursor: pointer; }
+        h1 { font-size: 1.8rem; color: #00f2fe; text-transform: uppercase; margin: 10px 0; }
         
-        footer { margin-top: 50px; padding: 30px; width: 100%; border-top: 1px solid #222; text-align: center; }
-        .legal-links a { color: #00f2fe; text-decoration: none; margin: 0 15px; font-size: 0.9rem; cursor: pointer;}
+        .tool-card { background: rgba(255, 255, 255, 0.05); border: 1px solid #333; border-radius: 20px; padding: 15px; margin: 20px 0; text-align: left; }
+        .tool-card h3 { color: #00f2fe; margin-top: 0; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
 
-        .modal { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); overflow:auto; }
-        .modal-content { background:#1e1e1e; margin:10% auto; padding:35px; width:85%; max-width:650px; border-radius:20px; position:relative; color:#ccc; line-height:1.7; }
+        /* 1. ESPAÇO INVISÍVEL */
+        .space-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 15px 0; }
+        .btn-space { background: linear-gradient(90deg, #4facfe, #00f2fe); border: none; padding: 18px 5px; color: #000; font-weight: bold; border-radius: 12px; cursor: pointer; font-size: 0.8rem; transition: 0.3s; }
+        .btn-space:active { transform: scale(0.95); }
+
+        /* 2. TRANSFORMADOR DE NICKS */
+        input { width: 100%; padding: 15px; background: #000; border: 2px solid #4facfe; color: #00f2fe; font-size: 1.2rem; text-align: center; border-radius: 12px; outline: none; box-sizing: border-box; }
+        .results-list { max-height: 180px; overflow-y: auto; margin-top: 10px; }
+        .item-copy { background: #111; padding: 12px; margin: 8px 0; border-radius: 10px; cursor: pointer; border: 1px solid #333; transition: 0.2s; font-size: 1rem; }
+        .item-copy:hover { border-color: #00f2fe; background: #1a1a1a; }
+
+        /* 3. BIBLIOTECA DE SIMBOLOS */
+        .symbol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 8px; margin-top: 10px; }
+        .sym-btn { background: #111; border: 1px solid #444; color: #fff; padding: 12px 5px; border-radius: 8px; cursor: pointer; font-size: 1.2rem; transition: 0.2s; }
+        .sym-btn:hover { border-color: #f9d423; background: #222; }
+
+        /* 4. GERADOR DE SENSI */
+        .sensi-display { background: #000; padding: 15px; border-radius: 12px; color: #f9d423; font-family: monospace; border: 1px solid #4facfe; margin: 10px 0; line-height: 1.6; }
+
+        /* COOKIE E MODAIS */
+        #cookie-popup { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: #fff; color: #000; padding: 20px; border-radius: 20px; z-index: 99999; text-align: center; }
+        #cookie-popup button { background: #000; color: #fff; border: none; padding: 10px 30px; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 15px; }
         
-        #toast { visibility: hidden; position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); background: #00f2fe; color: #000; padding: 12px 35px; border-radius: 50px; font-weight: bold; z-index: 10001; }
+        .modal { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); padding-top: 50px; }
+        .modal-content { background:#1e1e1e; margin:auto; padding:30px; width:85%; max-width:600px; border-radius:20px; color:#ccc; font-size: 0.9rem; max-height: 70vh; overflow-y: auto; }
+
+        /* SEO SECTION */
+        .seo-section { text-align: left; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 20px; margin-top: 25px; font-size: 0.95rem; line-height: 1.8; color: #aaa; }
+        .seo-section h2 { color: #00f2fe; font-size: 1.4rem; }
+        .seo-section h3 { color: #f9d423; font-size: 1.1rem; }
+
+        #toast { visibility: hidden; position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: #00f2fe; color: #000; padding: 12px 30px; border-radius: 50px; font-weight: bold; z-index: 10001; }
         #toast.show { visibility: visible; animation: fadein 0.5s; }
         @keyframes fadein { from {opacity: 0} to {opacity: 1} }
+
+        footer { padding: 30px; font-size: 0.75rem; color: #555; text-align: center; }
+        .footer-links { margin-bottom: 10px; }
+        .footer-links span { cursor: pointer; color: #00f2fe; margin: 0 10px; text-decoration: underline; }
     </style>
 </head>
 <body>
 
 <div class="main-container">
-    <button id="installBtn">📲 ADICIONAR À TELA INICIAL</button>
+    <button id="installBtn">📲 ADICIONAR AO MEU CELULAR</button>
+    <h1>Espaço Invisível & Nick Pro</h1>
 
-    <h1>Espaço Invisível FF</h1>
-    <h2>Gerador de Símbolos de Cria e Letra Fantasma 2026</h2>
-
-    <div class="btn-main-grid">
-        <button class="btn-copy-main" onclick="copyText('\u3164')">ESPAÇO GRANDE (COPIAR)</button>
-        <button class="btn-copy-main" onclick="copyText('\u2006')">ESPAÇO PEQUENO (COPIAR)</button>
-    </div>
-
-    <div class="simulator">
-        <p style="margin:0 0 15px 0; font-size: 1rem; color: #00f2fe;">Simulador de Nick & Letras Pequenas</p>
-        <input type="text" id="nickInput" maxlength="12" placeholder="Digite seu nome aqui..." oninput="updateFunctions(this.value)">
-        <p id="count" style="font-size: 0.8rem; color: #666; margin-top: 10px;">0 / 12 caracteres</p>
-        <div id="smallOutputArea" style="display:none;">
-            <span class="small-output" id="smallTextResult" onclick="copyText(this.innerText.replace(' (COPIAR)', ''))"></span>
+    <div class="tool-card">
+        <h3>⬜ 1. Copiar Espaço Invisível FF</h3>
+        <div class="space-grid">
+            <button class="btn-space" onclick="copyText('\u3164')">ESPAÇO<br>GRANDE</button>
+            <button class="btn-space" onclick="copyText('\u2000')">ESPAÇO<br>MÉDIO</button>
+            <button class="btn-space" onclick="copyText('\u2006')">ESPAÇO<br>PEQUENO</button>
         </div>
     </div>
 
-    <div class="tools-grid">
-        <div class="tool-card">
-            <h3>🎯 Gerador de Sensi</h3>
-            <div class="sensi-display" id="sensiResult">Geral: 98 | Red Dot: 92<br>Mira 2x: 88 | Mira 4x: 84<br>DPI: 600</div>
-            <button class="btn-tool" onclick="gerarSensi()">GERAR SENSI DE CRIA</button>
-        </div>
-
-        <div class="tool-card">
-            <h3>📝 Frases para BIO</h3>
-            <div class="bio-list">
-                <div class="bio-item" onclick="copyText('O silêncio é a melhor resposta. 🎯')">O silêncio é a melhor resposta. 🎯</div>
-                <div class="bio-item" onclick="copyText('Respeita a caminhada. ⚡')">Respeita a caminhada. ⚡</div>
-                <div class="bio-item" onclick="copyText('Foco no objetivo. 💸')">Foco no objetivo. 💸</div>
-                <div class="bio-item" onclick="copyText('Menos sorte, mais esforço. 💀')">Menos sorte, mais esforço. 💀</div>
-            </div>
+    <div class="tool-card">
+        <h3>⌨️ 2. Transformador de Nicks de Cria</h3>
+        <input type="text" id="nickInput" placeholder="Digite seu nome aqui..." oninput="updateFonts(this.value)">
+        <div class="results-list" id="fontResults">
+            <p style="text-align:center; color:#444">Digite acima para ver as opções...</p>
         </div>
     </div>
 
-    <div class="pro-section">
-        <h3>Biblioteca de Símbolos Expandida</h3>
-        <div class="pro-grid">
-            <div class="pro-card" onclick="copyText('Ⓥ')"><span class="pro-name">Oficial</span><span class="pro-symbol">Ⓥ</span></div>
-            <div class="pro-card" onclick="copyText('⚡')"><span class="pro-name">Raio</span><span class="pro-symbol">⚡</span></div>
-            <div class="pro-card" onclick="copyText('亗')"><span class="pro-name">Coroa</span><span class="pro-symbol">亗</span></div>
-            <div class="pro-card" onclick="copyText('†')"><span class="pro-name">Cruz</span><span class="pro-symbol">†</span></div>
-            <div class="pro-card" onclick="copyText('〆')"><span class="pro-name">Ninja</span><span class="pro-symbol">〆</span></div>
-            <div class="pro-card" onclick="copyText('︻╦̵̵͇̿̿̿̿╤──')"><span class="pro-name">Sniper</span><span class="pro-symbol">︻╦̵̵͇̿</span></div>
-            <div class="pro-card" onclick="copyText('▬▬ι═══════ﺤ')"><span class="pro-name">Katana</span><span class="pro-symbol">ι══ﺤ</span></div>
-            <div class="pro-card" onclick="copyText('☯')"><span class="pro-name">Yin Yang</span><span class="pro-symbol">☯</span></div>
-            <div class="pro-card" onclick="copyText('✿')"><span class="pro-name">Flor</span><span class="pro-symbol">✿</span></div>
-            <div class="pro-card" onclick="copyText('ʚĭɞ')"><span class="pro-name">Borboleta</span><span class="pro-symbol">ʚĭɞ</span></div>
-            <div class="pro-card" onclick="copyText('♆')"><span class="pro-name">Tridente</span><span class="pro-symbol">♆</span></div>
-            <div class="pro-card" onclick="copyText('⚝')"><span class="pro-name">Estrela</span><span class="pro-symbol">⚝</span></div>
-            <div class="pro-card" onclick="copyText('☁')"><span class="pro-name">Nuvem</span><span class="pro-symbol">☁</span></div>
-            <div class="pro-card" onclick="copyText('⚡︎')"><span class="pro-name">Raio Fino</span><span class="pro-symbol">⚡︎</span></div>
-            <div class="pro-card" onclick="copyText('')"><span class="pro-name">iPhone</span><span class="pro-symbol"></span></div>
+    <div class="tool-card">
+        <h3>⚡ 3. Símbolos para Nick (Biblioteca)</h3>
+        <div class="symbol-grid">
+            <button class="sym-btn" onclick="copyText('亗')">亗</button>
+            <button class="sym-btn" onclick="copyText('〆')">〆</button>
+            <button class="sym-btn" onclick="copyText('⚡')">⚡</button>
+            <button class="sym-btn" onclick="copyText('Ⓥ')">Ⓥ</button>
+            <button class="sym-btn" onclick="copyText('†')">†</button>
+            <button class="sym-btn" onclick="copyText('')"></button>
+            <button class="sym-btn" onclick="copyText('☯')">☯</button>
+            <button class="sym-btn" onclick="copyText('✿')">✿</button>
+            <button class="sym-btn" onclick="copyText('ʚĭɞ')">ʚĭɞ</button>
+            <button class="sym-btn" onclick="copyText('♆')">♆</button>
+            <button class="sym-btn" onclick="copyText('☁')">☁</button>
+            <button class="sym-btn" onclick="copyText('⚔️')">⚔️</button>
+            <button class="sym-btn" onclick="copyText('🏹')">🏹</button>
+            <button class="sym-btn" onclick="copyText('🔱')">🔱</button>
+            <button class="sym-btn" onclick="copyText('Ø')">Ø</button>
+            <button class="sym-btn" onclick="copyText('☣️')">☣️</button>
+            <button class="sym-btn" onclick="copyText('❄️')">❄️</button>
+            <button class="sym-btn" onclick="copyText('☄️')">☄️</button>
+            <button class="sym-btn" onclick="copyText('★')">★</button>
+            <button class="sym-btn" onclick="copyText('✧')">✧</button>
+            <button class="sym-btn" onclick="copyText('⚚')">⚚</button>
+            <button class="sym-btn" onclick="copyText('✵')">✵</button>
+            <button class="sym-btn" onclick="copyText('☾')">☾</button>
+            <button class="sym-btn" onclick="copyText('☼')">☼</button>
+            <button class="sym-btn" onclick="copyText('☥')">☥</button>
+            <button class="sym-btn" onclick="copyText('♕')">♕</button>
+            <button class="sym-btn" onclick="copyText('♚')">♚</button>
+            <button class="sym-btn" onclick="copyText('⚒')">⚒</button>
+            <button class="sym-btn" onclick="copyText('⚓')">⚓</button>
+            <button class="sym-btn" onclick="copyText('⚛')">⚛</button>
         </div>
     </div>
 
-    <section class="seo-box">
-        <h3>Copie o Espaço Invisível para Nick de Cria (FF e WhatsApp)</h3>
-        <p>Para jogadores de elite, o <strong>espaço invisível</strong> é um recurso obrigatório. Muitos jogos competitivos, como o Free Fire, não permitem o uso da tecla de espaço comum do teclado na hora de criar o nome. Para resolver isso, utilizamos o código <strong>Unicode U+3164 (Hangul Filler)</strong>, popularmente conhecido como <strong>letra invisível</strong> ou <strong>espaço em branco</strong>.</p>
+    <div class="tool-card">
+        <h3>🎯 4. Gerador de Sensibilidade Pro</h3>
+        <div class="sensi-display" id="sensiRes">Geral: 98 | Red Dot: 94<br>Mira 2x: 91 | Mira 4x: 88<br>DPI: 600</div>
+        <button class="btn-space" style="width:100%" onclick="gerarSensi()">GERAR SENSI ATUALIZADA</button>
+    </div>
+
+    <div class="tool-card">
+        <h3>📝 5. Frases para BIO (Copiar)</h3>
+        <div class="results-list">
+            <div class="item-copy" onclick="copyText('Vivendo do meu jeito, o resto é detalhe. 💸')">Vivendo do meu jeito, o resto é detalhe. 💸</div>
+            <div class="item-copy" onclick="copyText('Pouca mídia, muito progresso. 📈')">Pouca mídia, muito progresso. 📈</div>
+            <div class="item-copy" onclick="copyText('Foco no objetivo, o resto é fofoca. 🤑')">Foco no objetivo, o resto é fofoca. 🤑</div>
+            <div class="item-copy" onclick="copyText('O silêncio é a melhor resposta. 🎯')">O silêncio é a melhor resposta. 🎯</div>
+            <div class="item-copy" onclick="copyText('Respeita a caminhada de quem nunca desistiu. ⚡')">Respeita a caminhada de quem nunca desistiu. ⚡</div>
+            <div class="item-copy" onclick="copyText('O topo é o meu lugar por direito. 🥇')">O topo é o meu lugar por direito. 🥇</div>
+            <div class="item-copy" onclick="copyText('Ficando rico em silêncio enquanto eles falam. 🤫')">Ficando rico em silêncio enquanto eles falam. 🤫</div>
+            <div class="item-copy" onclick="copyText('Menos sorte, muito mais esforço diário. 💀')">Menos sorte, muito mais esforço diário. 💀</div>
+            <div class="item-copy" onclick="copyText('Um olho no prêmio, outro no processo. 🏆')">Um olho no prêmio, outro no processo. 🏆</div>
+            <div class="item-copy" onclick="copyText('Invejoso passa mal com o meu sucesso. 👋')">Invejoso passa mal com o meu sucesso. 👋</div>
+            <div class="item-copy" onclick="copyText('A meta é ser melhor que ontem, não que eles. 🚀')">A meta é ser melhor que ontem, não que eles. 🚀</div>
+            <div class="item-copy" onclick="copyText('Dono da minha própria sorte e destino. 🧿')">Dono da minha própria sorte e destino. 🧿</div>
+            <div class="item-copy" onclick="copyText('Forjado no caos, focado na vitória. ⚔️')">Forjado no caos, focado na vitória. ⚔️</div>
+            <div class="item-copy" onclick="copyText('Minha disciplina é minha liberdade. 🔥')">Minha disciplina é minha liberdade. 🔥</div>
+            <div class="item-copy" onclick="copyText('Não conto meus planos, mostro resultados. 💎')">Não conto meus planos, mostro resultados. 💎</div>
+            <div class="item-copy" onclick="copyText('Onde a maldade não me alcança. 🛡️')">Onde a maldade não me alcança. 🛡️</div>
+            <div class="item-copy" onclick="copyText('Lealdade é um estilo de vida. 🤝')">Lealdade é um estilo de vida. 🤝</div>
+        </div>
+    </div>
+
+    <article class="seo-section">
+        <h2>Guia Completo: Espaço Invisível FF e Nick de Cria 2026</h2>
+        <p>Se você busca como colocar <b>espaço invisível ff</b> no seu apelido, chegou ao lugar certo. O uso do caractere <b>U+3164</b>, também conhecido como <b>letra invisível</b> ou <b>código invisível</b>, tornou-se o padrão para jogadores que desejam um <b>nick de cria</b> no Free Fire. Como o jogo não aceita a barra de espaço do teclado comum, nossa ferramenta gera o código Unicode exato para você copiar e colar sem erros.</p>
         
-        <p>Este caractere especial engana o sistema do jogo, permitindo que você crie um <strong>nick de cria</strong> personalizado, separe a sua <strong>tag de guilda</strong> ou até deixe o seu nome totalmente invisível no perfil.</p>
+        <h3>Por que usar o Espaço Invisível para Nick?</h3>
+        <p>A estética no <b>Freefire</b> é fundamental. Um jogador que utiliza o <b>espaço invisível grande</b> consegue separar o nome da guilda do seu nome pessoal, criando uma hierarquia visual limpa. Além disso, o <b>espaço invisível pequeno</b> é muito procurado para ajustes de caracteres quando o limite de 12 letras do jogo está quase atingido. O <b>frefire</b> evoluiu, e hoje ter um nome com símbolos e espaços vazios é sinônimo de experiência no cenário competitivo.</p>
 
-        <h4>Onde você pode usar o Código Invisível?</h4>
-        <ul>
-            <li><strong>Free Fire (FF):</strong> Ideal para separar nomes e tags no apelido sem erros de "caractere inválido".</li>
-            <li><strong>WhatsApp:</strong> Envie <strong>mensagens vazias</strong> ou deixe seu "Recado" em branco.</li>
-            <li><strong>Instagram e TikTok:</strong> Perfeito para pular linhas na biografia de forma limpa.</li>
-        </ul>
+        <h3>Como mudar o nick no Free Fire com Espaço?</h3>
+        <p>O processo é simples: primeiro, você escolhe o tamanho do espaço desejado em nosso site e clica em copiar. No jogo, ao clicar para alterar seu apelido, você deve pressionar o campo de digitação até que a opção "Colar" apareça. Evite digitar manualmente, pois o sistema pode não reconhecer o caractere. Nossa ferramenta é testada diariamente para garantir que o <b>espaço invisível free fire</b> funcione em todas as versões do jogo, incluindo o Max.</p>
 
-        <div class="dica-ouro">
-            <strong>Dica de Ouro:</strong> Para funcionar no jogo, você não deve usar o teclado. Clique no botão <strong>"Copiar"</strong> acima e, dentro do seu jogo ou app, <strong>segure o dedo no campo de texto e selecione "Colar"</strong>.
-        </div>
-    </section>
+        <h3>Símbolos de Cria e Letras Diferentes</h3>
+        <p>Não basta apenas o espaço; um <b>nick de cria</b> de respeito pede símbolos. A <b>Coroa (亗)</b>, o <b>Raio (⚡)</b> e o famoso <b>Verificado (Ⓥ)</b> são os mais buscados em 2026. Nosso <b>transformador de nicks</b> oferece opções de letras pequenas (superiores), fontes cursivas e decorações automáticas. Ao combinar <b>espaço invisível ff</b> com estes símbolos, você garante que seu perfil seja notado em qualquer sala personalizada ou campeonato.</p>
+
+        <h3>Sensibilidade (Sensi) e DPI para subir Capa</h3>
+        <p>Muitos jogadores que procuram por <b>espaço invisível</b> também desejam melhorar sua gameplay. Por isso, integramos um <b>gerador de sensi</b>. A <b>sensibilidade free fire</b> é o que define a velocidade da sua mira. Ajustar a <b>DPI</b> correta no seu Android ou iPhone, junto com as configurações de Geral e Red Dot que fornecemos, é o segredo dos Pro Players para "grudar o dedo na cabeça" e subir patente rapidamente em 2026.</p>
+
+        <h3>Utilidade no WhatsApp e Redes Sociais</h3>
+        <p>Além do uso no <b>frefire</b>, o <b>código invisível</b> é amplamente utilizado no <b>WhatsApp</b>. Sabe quando você quer enviar uma mensagem vazia ou deixar seu nome de perfil em branco? Basta copiar o nosso <b>espaço invisível grande</b> e colar no app. Ele funciona em biografias do Instagram, TikTok e qualquer plataforma que exija preenchimento de texto mas que você deseje manter minimalista.</p>
+    </article>
 </div>
 
-<div id="cookie-banner">
-    <span>Usamos cookies para anúncios personalizados e análise de tráfego.</span>
-    <button onclick="acceptCookies()">ACEITAR</button>
+<div id="cookie-popup">
+    <p>🍪 Utilizamos cookies para melhorar sua experiência e analisar o tráfego. Ao clicar em aceitar, você concorda com nossos termos.</p>
+    <button onclick="acceptCookies()">ACEITAR E FECHAR</button>
+</div>
+
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <h3>Política de Privacidade</h3>
+        <p>Seus dados são protegidos. Utilizamos cookies apenas para análise de tráfego anônimo via Google Analytics e para salvar suas preferências de instalação.</p>
+        <button onclick="closeModal('privacyModal')" class="btn-space" style="width:100%">FECHAR</button>
+    </div>
+</div>
+
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <h3>Termos de Uso</h3>
+        <p>O uso dos códigos Unicode e geradores de sensibilidade é de responsabilidade do usuário. Não temos vínculo oficial com a Garena ou Free Fire.</p>
+        <button onclick="closeModal('termsModal')" class="btn-space" style="width:100%">FECHAR</button>
+    </div>
 </div>
 
 <footer>
-    <div class="legal-links">
-        <a onclick="openModal('privacy')">Privacidade</a> | 
-        <a onclick="openModal('terms')">Termos de Uso</a>
+    <div class="footer-links">
+        <span onclick="openModal('termsModal')">Termos de Uso</span> | 
+        <span onclick="openModal('privacyModal')">Privacidade</span>
     </div>
-    <p style="margin-top:15px; color:#444;">&copy; 2026 Nick de Cria - Todos os direitos reservados.</p>
+    &copy; 2026 Espaço Invisível Pro - Ferramentas de Cria
 </footer>
-
-<div id="legalModal" class="modal">
-    <div class="modal-content">
-        <span onclick="closeModal()" style="position:absolute; right:20px; top:10px; cursor:pointer; font-size:30px; color:#ff4a4a;">&times;</span>
-        <div id="modalContent"></div>
-    </div>
-</div>
 
 <div id="toast">Copiado com sucesso! 🚀</div>
 
 <script>
-    function copyText(text) {
-        const el = document.createElement('textarea');
-        el.value = text; document.body.appendChild(el);
-        el.select(); document.execCommand('copy');
-        document.body.removeChild(el);
-        var x = document.getElementById("toast");
-        x.className = "show";
-        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2500);
-    }
-
-    function updateFunctions(val) {
-        document.getElementById('count').innerText = val.length + ' / 12 caracteres';
-        const smallMap = {'a':'ᵃ','b':'ᵇ','c':'ᶜ','d':'ᵈ','e':'ᵉ','f':'ᶠ','g':'ᵍ','h':'ʰ','i':'ⁱ','j':'ʲ','k':'ᵏ','l':'ˡ','m':'ᵐ','n':'ⁿ','o':'ᵒ','p':'ᵖ','q':'ᵠ','r':'ʳ','s':'ˢ','t':'ᵗ','u':'ᵘ','v':'ᵛ','w':'ʷ','x':'ˣ','y':'ʸ','z':'ᶻ'};
-        const result = val.toLowerCase().split('').map(char => smallMap[char] || char).join('');
-        const container = document.getElementById('smallOutputArea');
-        if(val.length > 0) {
-            container.style.display = 'block';
-            document.getElementById('smallTextResult').innerText = result + " (COPIAR)";
-        } else { container.style.display = 'none'; }
+    function copyText(t) {
+        const e = document.createElement('textarea'); e.value = t;
+        document.body.appendChild(e); e.select(); document.execCommand('copy');
+        document.body.removeChild(e);
+        const s = document.getElementById("toast"); s.className = "show";
+        setTimeout(() => s.className = "", 2500);
     }
 
     function gerarSensi() {
-        const geral = Math.floor(Math.random() * 15) + 85;
-        const redDot = Math.floor(Math.random() * 20) + 80;
-        const dpi = [411, 500, 600, 800][Math.floor(Math.random() * 4)];
-        document.getElementById('sensiResult').innerHTML = `Geral: ${geral} | Red Dot: ${redDot}<br>Mira 2x: 90 | Mira 4x: 85<br>DPI: ${dpi}`;
+        const g = Math.floor(Math.random() * 8) + 92;
+        const d = [411, 500, 600, 720, 800, 960][Math.floor(Math.random() * 6)];
+        document.getElementById('sensiRes').innerHTML = `Geral: ${g} | Red Dot: ${g-4}<br>Mira 2x: ${g-8} | Mira 4x: ${g-12}<br>DPI: ${d}`;
         copyText("Sensi Gerada!");
     }
 
-    function acceptCookies() { localStorage.setItem('cookiesAccepted2026', 'true'); document.getElementById('cookie-banner').style.display = 'none'; }
-    if (localStorage.getItem('cookiesAccepted2026')) document.getElementById('cookie-banner').style.display = 'none';
-
-    function openModal(type) {
-        const content = {
-            privacy: "<h2>Política de Privacidade</h2><p>Este site utiliza cookies para melhorar sua experiência e exibir anúncios personalizados via Google AdSense. Seus dados de navegação são processados de forma anônima.</p>",
-            terms: "<h2>Termos de Uso</h2><p>O uso dos códigos Unicode fornecidos é de total responsabilidade do usuário. Não garantimos funcionamento eterno caso as plataformas (FF, WhatsApp) alterem suas regras.</p>"
-        };
-        document.getElementById('modalContent').innerHTML = content[type];
-        document.getElementById('legalModal').style.display = "block";
+    function updateFonts(v) {
+        if(!v) { document.getElementById('fontResults').innerHTML = '<p style="text-align:center; color:#444">Digite acima para ver as opções...</p>'; return; }
+        const f = [
+            `꧁ ${v} ꧂`, `亗 ${v} 亗`, `〆${v}`, `Ⓥ ${v}`, `⚡ ${v.toUpperCase()} ⚡`, 
+            v.split('').map(c => c + '🏻').join(''), v.toUpperCase(), v.toLowerCase()
+        ];
+        document.getElementById('fontResults').innerHTML = f.map(i => `<div class="item-copy" onclick="copyText('${i}')">${i}</div>`).join('');
     }
-    function closeModal() { document.getElementById('legalModal').style.display = "none"; }
 
-    let deferredPrompt;
+    function acceptCookies() { localStorage.setItem('cCons2026', 'Y'); document.getElementById('cookie-popup').style.display = 'none'; }
+    if(localStorage.getItem('cCons2026')) document.getElementById('cookie-popup').style.display = 'none';
+
+    function openModal(id) { document.getElementById(id).style.display = "block"; }
+    function closeModal(id) { document.getElementById(id).style.display = "none"; }
+
+    let defP;
     window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault(); deferredPrompt = e;
-        document.getElementById('installBtn').style.display = 'inline-block';
+        e.preventDefault(); defP = e;
+        document.getElementById('installBtn').style.display = 'block';
     });
     document.getElementById('installBtn').addEventListener('click', () => {
-        if (deferredPrompt) {
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then(() => { deferredPrompt = null; document.getElementById('installBtn').style.display = 'none'; });
-        }
+        if(defP) { defP.prompt(); document.getElementById('installBtn').style.display = 'none'; }
     });
 </script>
-
 </body>
 </html>
