@@ -35,10 +35,30 @@
             border: 1px solid rgba(0, 242, 254, 0.3); box-sizing: border-box; text-align: center;
         }
 
-        #installBtn { display: none; background: #f9d423; color: #000; border: none; padding: 15px; border-radius: 50px; font-weight: bold; margin-bottom: 20px; cursor: pointer; width: 100%; box-shadow: 0 0 15px #f9d423; }
+        /* BOTÃO DE INSTALAÇÃO MOBILE */
+        #installBtn { 
+            display: none; 
+            background: linear-gradient(90deg, #f9d423, #ff4e50); 
+            color: #000; 
+            border: none; 
+            padding: 18px; 
+            border-radius: 50px; 
+            font-weight: 800; 
+            margin-bottom: 25px; 
+            cursor: pointer; 
+            width: 100%; 
+            font-size: 1.1rem;
+            box-shadow: 0 0 20px rgba(249, 212, 35, 0.5); 
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); box-shadow: 0 0 30px rgba(249, 212, 35, 0.8); }
+            100% { transform: scale(1); }
+        }
 
         h1 { font-size: 1.8rem; color: #00f2fe; text-transform: uppercase; margin: 10px 0; }
-        
         .tool-card { background: rgba(255, 255, 255, 0.05); border: 1px solid #333; border-radius: 20px; padding: 15px; margin: 20px 0; text-align: left; }
         .tool-card h3 { color: #00f2fe; margin-top: 0; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 1.1rem; }
 
@@ -52,7 +72,6 @@
 
         .symbol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 8px; margin-top: 10px; }
         .sym-btn { background: #111; border: 1px solid #444; color: #fff; padding: 12px 5px; border-radius: 8px; cursor: pointer; font-size: 1.2rem; }
-
         .sensi-display { background: #000; padding: 15px; border-radius: 12px; color: #f9d423; font-family: monospace; border: 1px solid #4facfe; margin: 10px 0; line-height: 1.6; }
 
         #cookie-popup { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: #fff; color: #000; padding: 20px; border-radius: 20px; z-index: 99999; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
@@ -63,6 +82,7 @@
 
         .seo-section { text-align: left; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 20px; margin-top: 25px; font-size: 0.95rem; line-height: 1.8; color: #aaa; }
         .seo-section h2 { color: #00f2fe; }
+        .seo-section h3 { color: #fff; margin-bottom: 5px; }
 
         #toast { visibility: hidden; position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: #00f2fe; color: #000; padding: 12px 30px; border-radius: 50px; font-weight: bold; z-index: 10001; }
         #toast.show { visibility: visible; animation: fadein 0.5s; }
@@ -75,7 +95,7 @@
 <body>
 
 <div class="main-container">
-    <button id="installBtn">📲 INSTALAR NO CELULAR</button>
+    <button id="installBtn">📲 BAIXAR APP (ESPAÇO INVISÍVEL)</button>
     <h1>Espaço Invisível Pro</h1>
 
     <div class="tool-card">
@@ -142,20 +162,20 @@
     </div>
 
     <article class="seo-section">
-        <h2>Tudo sobre o Espaço Invisível FF e Nick de Cria</h2>
-        <p>Se você está procurando como colocar <b>espaço invisível ff</b> no seu nome, você encontrou a ferramenta mais completa de 2026. O <b>espaço invisível</b> (código Unicode U+3164) é essencial para quem quer ter um <b>nick de cria</b> no Free Fire, permitindo separar o nome da guilda ou até deixar o nome totalmente em branco.</p>
+        <h2>Tudo sobre o Espaço Invisível FF e Nick de Cria 2026</h2>
+        <p>Se você está procurando <b>como colocar espaço invisível ff</b> no seu nome, você encontrou a ferramenta mais completa e atualizada. O <b>espaço invisível</b> (código Unicode U+3164) é o segredo dos grandes jogadores para criar um <b>nick de cria</b> no Free Fire, permitindo separar nomes, tags de guilda ou até deixar o apelido totalmente invisível para trollar no lobby.</p>
         
-        <h3>Como usar o Espaço Invisível no Free Fire?</h3>
-        <p>O processo é simples: escolha entre o <b>espaço invisível grande</b>, médio ou pequeno acima, clique em copiar e, dentro do jogo, cole no campo de mudança de nome. Como o <b>frefire</b> não aceita a tecla de espaço do teclado comum, este código é a única forma de personalizar seu apelido de maneira profissional.</p>
+        <h3>Como usar o Espaço Invisível no Free Fire em 2026?</h3>
+        <p>O processo é simples e rápido: escolha entre o <b>espaço invisível grande</b>, médio ou pequeno na nossa tabela acima. Clique no botão de copiar e, dentro do jogo, cole no campo de mudança de apelido. Como o teclado padrão do celular não permite inserir espaços no <b>frefire</b>, o uso desse código especial é a única forma de personalizar seu nome profissionalmente.</p>
 
-        <h3>Transformador de Nicks e Letras Diferentes</h3>
-        <p>Nossa ferramenta conta com um <b>gerador de letras diferentes</b> que cria mais de 700 variações de fontes para o seu nick. Ao digitar seu nome, o sistema combina estilos como negrito, itálico e símbolos de cria (raio, coroa, verificado) para que seu perfil se destaque no lobby.</p>
+        <h3>Transformador de Nicks: Letras Diferentes e Símbolos de Cria</h3>
+        <p>Nosso <b>gerador de letras diferentes</b> vai além do básico. Ele transforma seu nome comum em um <b>nick personalizado</b> com mais de 700 combinações de fontes exclusivas, como letras pequenas, subscritas, negrito e estilos góticos. Além disso, nossa <b>biblioteca de símbolos para FF</b> inclui o famoso raio, o sinal de verificado (V de Verificado), a coroa e as cruzes que são tendência entre os pro players.</p>
 
-        <h3>Sensibilidade Free Fire e DPI</h3>
-        <p>Além do visual, a performance é fundamental. Nosso <b>gerador de sensi</b> fornece configurações atualizadas para subir capa com facilidade. Ajustar a <b>sensibilidade ff</b> e a <b>DPI</b> garante uma movimentação muito mais rápida.</p>
+        <h3>Melhor Sensibilidade Free Fire e Configurações de DPI</h3>
+        <p>Para ser um jogador completo, o visual não é tudo. Por isso, incluímos um <b>gerador de sensi ff</b>. Ele fornece cálculos baseados nas atualizações mais recentes do jogo, sugerindo a <b>DPI ideal</b> e ajustes de sensibilidade para Geral, Red Dot, Mira 2x e 4x. Ter uma <b>sensibilidade de mestre</b> ajuda você a subir capa com qualquer arma, seja no Android ou iPhone.</p>
 
-        <h3>Frases para Bio do FF</h3>
-        <p>A <b>bio do Free Fire</b> é o seu cartão de visitas. Usar frases de impacto com <b>espaço invisível</b> e símbolos torna seu perfil muito mais atraente.</p>
+        <h3>Por que usar um Nick Invisível ou Espaçado?</h3>
+        <p>No cenário competitivo de 2026, a estética do seu perfil diz muito sobre você. O <b>espaço invisível para nick</b> permite que você use nomes curtos ou esconda sua identidade em salas personalizadas. Muitas guildas famosas exigem o uso do espaço para separar a sigla do nome, garantindo uma organização visual muito maior. Nossa ferramenta é 100% segura, não dá ban e funciona instantaneamente.</p>
     </article>
 </div>
 
@@ -167,7 +187,7 @@
 <div id="termsModal" class="modal">
     <div class="modal-content">
         <h3>Termos de Uso</h3>
-        <p>Este site oferece ferramentas gratuitas de personalização. Não temos vínculo com a Garena. O uso dos códigos é de responsabilidade do usuário.</p>
+        <p>Uso gratuito de responsabilidade do usuário.</p>
         <button onclick="closeModal('termsModal')" class="btn-space" style="width:100%">FECHAR</button>
     </div>
 </div>
@@ -175,7 +195,7 @@
 <div id="privacyModal" class="modal">
     <div class="modal-content">
         <h3>Privacidade</h3>
-        <p>Usamos o Google Analytics para entender o tráfego. Nenhum dado pessoal sensível é coletado ou vendido a terceiros.</p>
+        <p>Nenhum dado sensível é coletado.</p>
         <button onclick="closeModal('privacyModal')" class="btn-space" style="width:100%">FECHAR</button>
     </div>
 </div>
@@ -243,29 +263,27 @@
         res.innerHTML = final.map(i => `<div class="item-copy" onclick="copyText('${i}')">${i}</div>`).join('');
     }
 
-    // --- CORREÇÃO COOKIE (PERSISTÊNCIA) ---
+    // --- COOKIE POPUP CORREÇÃO ---
     function acceptCookies() { 
         localStorage.setItem('cCons2026', 'Y'); 
-        const popup = document.getElementById('cookie-popup');
-        if(popup) popup.style.display = 'none'; 
+        document.getElementById('cookie-popup').style.display = 'none'; 
     }
 
     document.addEventListener("DOMContentLoaded", function() {
         if(localStorage.getItem('cCons2026') === 'Y') {
-            const popup = document.getElementById('cookie-popup');
-            if(popup) popup.style.display = 'none';
+            document.getElementById('cookie-popup').style.display = 'none';
         }
     });
 
     function openModal(id) { document.getElementById(id).style.display = "block"; }
     function closeModal(id) { document.getElementById(id).style.display = "none"; }
 
-    // --- PWA / BOTÃO INSTALAR ---
+    // --- PWA INSTALADOR ---
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('sw.js')
-                .then(reg => console.log('SW ativo'))
-                .catch(err => console.log('Erro SW'));
+                .then(reg => console.log('SW OK'))
+                .catch(err => console.log('SW Erro'));
         });
     }
 
@@ -280,7 +298,7 @@
 
     setTimeout(() => {
         if (!deferredPrompt) installBtn.style.display = 'block';
-    }, 5000);
+    }, 6000);
 
     installBtn.addEventListener('click', async () => {
         if (deferredPrompt) {
