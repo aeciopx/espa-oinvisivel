@@ -16,7 +16,7 @@
       gtag('js', new Date());
       gtag('config', 'G-0B7WMGBEPZ');
     </script>
-    <title>Espaço Invisível FF 2026 - Nicks de Cria & Sensibilidade</title>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
@@ -221,30 +221,35 @@
         if (!v) { res.innerHTML = '<p style="text-align:center; color:#444">Digite acima...</p>'; return; }
 
         const maps = {
-            bold: { a: "𝗮", b: "𝗯", c: "𝗰", d: "𝗱", e: "𝗲", f: "𝗳", g: "𝗴", h: "𝗵", i: "𝗶", j: "𝗷", k: "𝗸", l: "𝗹", m: "𝗺", n: "𝗻", o: "𝗼", p: "𝗽", q: "𝗾", r: "𝗿", s: "𝘀", t: "𝘁", u: "𝘂", v: "𝘃", w: "𝘄", x: "𝘅", y: "𝘆", z: "𝘇" },
-            italic: { a: "𝘢", b: "𝘣", c: "𝘤", d: "𝘥", e: "𝘦", f: "𝘧", g: "𝘨", h: "𝘩", i: "𝘪", j: "𝘫", k: "𝘬", l: "𝘭", m: "𝘮", n: "𝘯", o: "𝘰", p: "𝘱", q: "𝘲", r: "𝘳", s: "𝘴", t: "𝘵", u: "𝘶", v: "𝘷", w: "𝘸", x: "𝘹", y: "𝘺", z: "𝘻" },
-            script: { a: "𝒶", b: "𝒷", c: "𝒸", d: "𝒹", e: "ℯ", f: "𝒻", g: "ℊ", h: "𝒽", i: "𝒾", j: "𝒿", k: "𝓀", l: "𝓁", m: "𝓂", n: "𝓃", o: "ℴ", p: "𝓅", q: "𝓆", r: "𝓇", s: "𝓈", t: "𝓉", u: "𝓊", v: "𝓋", w: "𝓌", x: "𝓍", y: "𝓎", z: "𝓏" },
-            bubble: { a: "ⓐ", b: "ⓑ", c: "ⓒ", d: "ⓓ", e: "ⓔ", f: "ⓕ", g: "ⓖ", h: "ⓗ", i: "ⓘ", j: "ⓙ", k: "ⓚ", l: "ⓛ", m: "ⓜ", n: "ⓝ", o: "ⓞ", p: "ⓟ", q: "ⓠ", r: "ⓡ", s: "ⓢ", t: "ⓣ", u: "ⓤ", v: "ⓥ", w: "ⓦ", x: "ⓧ", y: "ⓨ", z: "ⓩ" },
-            small: { a: "ᴀ", b: "ʙ", c: "ᴄ", d: "ᴅ", e: "ᴇ", f: "ꜰ", g: "ɢ", h: "ʜ", i: "ɪ", j: "ᴊ", k: "ᴋ", l: "ʟ", m: "ᴍ", n: "ɴ", o: "ᴏ", p: "ᴘ", q: "ǫ", r: "ʀ", s: "s", t: "ᴛ", u: "ᴜ", v: "ᴠ", w: "ᴡ", x: "x", y: "ʏ", z: "ᴢ" }
+            bold: {a:"𝗮",b:"𝗯",c:"𝗰",d:"𝗱",e:"𝗲",f:"𝗳",g:"𝗴",h:"𝗵",i:"𝗶",j:"𝗷",k:"𝗸",l:"𝗹",m:"𝗺",n:"𝗻",o:"𝗼",p:"𝗽",q:"𝗾",r:"𝗿",s:"𝘀",t:"𝘁",u:"𝘂",v:"𝘃",w:"𝘄",x:"𝘅",y:"𝘆",z:"𝘇"},
+            italic: {a:"𝘢",b:"𝘣",c:"𝘤",d:"𝘥",e:"𝘦",f:"𝘧",g:"𝘨",h:"𝘩",i:"𝘪",j:"𝘫",k:"𝘬",l:"𝘭",m:"𝘮",n:"𝘯",o:"𝘰",p:"𝘱",q:"𝘲",r:"𝘳",s:"𝘴",t:"𝘵",u:"𝘶",v:"𝘷",w:"𝘸",x:"𝘹",y:"𝘺",z:"𝘻"},
+            script: {a:"𝒶",b:"𝒷",c:"𝒸",d:"𝒹",e:"ℯ",f:"𝒻",g:"ℊ",h:"𝒽",i:"𝒾",j:"𝒿",k:"𝓀",l:"𝓁",m:"𝓂",n:"𝓃",o:"ℴ",p:"𝓅",q:"𝓆",r:"𝓇",s:"𝓈",t:"𝓉",u:"𝓊",v:"𝓋",w:"𝓌",x:"𝓍",y:"𝓎",z:"𝓏"},
+            bubble: {a:"ⓐ",b:"ⓑ",c:"ⓒ",d:"ⓓ",e:"ⓔ",f:"ⓕ",g:"ⓖ",h:"ⓗ",i:"ⓘ",j:"ⓙ",k:"ⓚ",l:"ⓛ",m:"ⓜ",n:"ⓝ",o:"ⓞ",p:"ⓟ",q:"ⓠ",r:"ⓡ",s:"ⓢ",t:"ⓣ",u:"ⓤ",v:"ⓥ",w:"ⓦ",x:"ⓧ",y:"ⓨ",z:"ⓩ"},
+            mono: {a:"𝚊",b:"𝚋",c:"𝚌",d:"𝚍",e:"𝚎",f:"𝚏",g:"𝚐",h:"𝚑",i:"𝚒",j:"𝚓",k:"𝚔",l:"𝚕",m:"𝚖",n:"𝚗",o:"𝚘",p:"𝚙",q:"𝚚",r:"𝚛",s:"𝚜",t:"𝚝",u:"𝚞",v:"𝚟",w:"𝚠",x:"𝚡",y:"𝚢",z:"𝚣"},
+            greek: {a:"α",b:"ϐ",c:"ͼ",d:"∂",e:"ϵ",f:"ϝ",g:"ϑ",h:"н",i:"ι",j:"ϳ",k:"κ",l:"ℓ",m:"ϻ",n:"ͷ",o:"ϴ",p:"π",q:"ϙ",r:"я",s:"ͽ",t:"τ",u:"υ",v:"ν",w:"ω",x:"ϰ",y:"ψ",z:"ζ"}
         };
 
-        const decorations = [
-            ["꧁", "꧂"], ["亗", "亗"], ["〆", ""], ["Ⓥ", ""], ["⚡", "⚡"], ["†", "†"], ["✿", "✿"], ["⚔️", "⚔️"], ["☯", "☯"]
+        const decs = [
+            ["꧁", "꧂"], ["亗", "亗"], ["〆", ""], ["Ⓥ", ""], ["⚡", "⚡"], ["†", "†"], ["✿", "✿"], 
+            ["⚔️", "⚔️"], ["☯", "☯"], ["ʚ", "ɞ"], ["☠️", "☠️"], ["『", "』"], ["ツ", ""], ["×", "×"],
+            ["", ""], ["☣️", "☣️"], ["♛", "♛"], ["★", "★"], ["💎", "💎"], ["🏹", ""], ["🎯", ""],
+            ["鬼", ""], ["ダーク", ""], ["Ø", "Ø"], ["☾", "☽"], ["♆", "♆"], ["✡", "✡"]
         ];
 
         let list = [];
         Object.keys(maps).forEach(style => {
-            let transformed = v.toLowerCase().split('').map(char => maps[style][char] || char).join('');
-            list.push(transformed);
-            decorations.forEach(dec => {
-                list.push(`${dec[0]} ${transformed} ${dec[1]}`);
-                list.push(`${transformed.toUpperCase()} ${dec[0]}`);
-                list.push(`${dec[0]}${transformed}${dec[1]}`);
+            let text = v.toLowerCase().split('').map(char => maps[style][char] || char).join('');
+            list.push(text); 
+            list.push(text.toUpperCase()); 
+            decs.forEach(d => {
+                list.push(`${d[0]}${text}${d[1]}`);
+                list.push(`${d[0]} ${text.toUpperCase()} ${d[1]}`);
+                list.push(`${text} ${d[0]}`);
             });
         });
 
-        const unique = [...new Set(list)];
-        res.innerHTML = unique.map(i => `<div class="item-copy" onclick="copyText('${i}')">${i}</div>`).join('');
+        const final = [...new Set(list)];
+        res.innerHTML = final.map(i => `<div class="item-copy" onclick="copyText('${i}')">${i}</div>`).join('');
     }
 
     // COOKIE & MODAIS
@@ -254,14 +259,26 @@
     function openModal(id) { document.getElementById(id).style.display = "block"; }
     function closeModal(id) { document.getElementById(id).style.display = "none"; }
 
-    // PWA
-    let defP;
+    // SERVICE WORKER & PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+
+    let deferredPrompt;
     window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault(); defP = e;
+        e.preventDefault();
+        deferredPrompt = e;
         document.getElementById('installBtn').style.display = 'block';
     });
+
     document.getElementById('installBtn').addEventListener('click', () => {
-        if(defP) { defP.prompt(); document.getElementById('installBtn').style.display = 'none'; }
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt = null;
+            document.getElementById('installBtn').style.display = 'none';
+        }
     });
 </script>
 </body>
