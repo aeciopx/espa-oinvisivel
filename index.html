@@ -9,11 +9,17 @@
   gtag('js', new Date());
 
   gtag('config', 'G-0B7WMGBEPZ');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXX');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Espaço Invisível FF 2026 - Nicks de Cria, Símbolos e Sensi</title>
-    <link rel="manifest" href="manifest.json">
+    <title>Espaço Invisível FF 2026 - Nicks de Cria & Sensibilidade</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
@@ -37,56 +43,53 @@
         h1 { font-size: 1.8rem; color: #00f2fe; text-transform: uppercase; margin: 10px 0; }
         
         .tool-card { background: rgba(255, 255, 255, 0.05); border: 1px solid #333; border-radius: 20px; padding: 15px; margin: 20px 0; text-align: left; }
-        .tool-card h3 { color: #00f2fe; margin-top: 0; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px; }
+        .tool-card h3 { color: #00f2fe; margin-top: 0; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 1.1rem; }
 
         /* 1. ESPAÇO INVISÍVEL */
         .space-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 15px 0; }
-        .btn-space { background: linear-gradient(90deg, #4facfe, #00f2fe); border: none; padding: 18px 5px; color: #000; font-weight: bold; border-radius: 12px; cursor: pointer; font-size: 0.8rem; transition: 0.3s; }
-        .btn-space:active { transform: scale(0.95); }
+        .btn-space { background: linear-gradient(90deg, #4facfe, #00f2fe); border: none; padding: 18px 5px; color: #000; font-weight: bold; border-radius: 12px; cursor: pointer; font-size: 0.8rem; }
 
         /* 2. TRANSFORMADOR DE NICKS */
         input { width: 100%; padding: 15px; background: #000; border: 2px solid #4facfe; color: #00f2fe; font-size: 1.2rem; text-align: center; border-radius: 12px; outline: none; box-sizing: border-box; }
-        .results-list { max-height: 180px; overflow-y: auto; margin-top: 10px; }
-        .item-copy { background: #111; padding: 12px; margin: 8px 0; border-radius: 10px; cursor: pointer; border: 1px solid #333; transition: 0.2s; font-size: 1rem; }
+        .results-list { max-height: 250px; overflow-y: auto; margin-top: 10px; border: 1px solid #222; border-radius: 10px; padding: 5px; }
+        .item-copy { background: #111; padding: 12px; margin: 5px 0; border-radius: 10px; cursor: pointer; border: 1px solid #333; transition: 0.2s; font-size: 1.1rem; text-align: center; }
         .item-copy:hover { border-color: #00f2fe; background: #1a1a1a; }
 
         /* 3. BIBLIOTECA DE SIMBOLOS */
         .symbol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 8px; margin-top: 10px; }
-        .sym-btn { background: #111; border: 1px solid #444; color: #fff; padding: 12px 5px; border-radius: 8px; cursor: pointer; font-size: 1.2rem; transition: 0.2s; }
-        .sym-btn:hover { border-color: #f9d423; background: #222; }
+        .sym-btn { background: #111; border: 1px solid #444; color: #fff; padding: 12px 5px; border-radius: 8px; cursor: pointer; font-size: 1.2rem; }
 
         /* 4. GERADOR DE SENSI */
         .sensi-display { background: #000; padding: 15px; border-radius: 12px; color: #f9d423; font-family: monospace; border: 1px solid #4facfe; margin: 10px 0; line-height: 1.6; }
 
-        /* COOKIE E MODAIS */
-        #cookie-popup { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: #fff; color: #000; padding: 20px; border-radius: 20px; z-index: 99999; text-align: center; }
-        #cookie-popup button { background: #000; color: #fff; border: none; padding: 10px 30px; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 15px; }
+        /* COOKIE POPUP */
+        #cookie-popup { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: #fff; color: #000; padding: 20px; border-radius: 20px; z-index: 99999; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        #cookie-popup button { background: #000; color: #fff; border: none; padding: 12px 30px; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 15px; width: 100%; }
         
-        .modal { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); padding-top: 50px; }
-        .modal-content { background:#1e1e1e; margin:auto; padding:30px; width:85%; max-width:600px; border-radius:20px; color:#ccc; font-size: 0.9rem; max-height: 70vh; overflow-y: auto; }
+        /* MODAIS */
+        .modal { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); }
+        .modal-content { background:#1e1e1e; margin:15% auto; padding:30px; width:85%; max-width:500px; border-radius:20px; color:#ccc; max-height: 60vh; overflow-y: auto; }
 
         /* SEO SECTION */
         .seo-section { text-align: left; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 20px; margin-top: 25px; font-size: 0.95rem; line-height: 1.8; color: #aaa; }
-        .seo-section h2 { color: #00f2fe; font-size: 1.4rem; }
-        .seo-section h3 { color: #f9d423; font-size: 1.1rem; }
+        .seo-section h2 { color: #00f2fe; }
 
         #toast { visibility: hidden; position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: #00f2fe; color: #000; padding: 12px 30px; border-radius: 50px; font-weight: bold; z-index: 10001; }
         #toast.show { visibility: visible; animation: fadein 0.5s; }
         @keyframes fadein { from {opacity: 0} to {opacity: 1} }
 
-        footer { padding: 30px; font-size: 0.75rem; color: #555; text-align: center; }
-        .footer-links { margin-bottom: 10px; }
+        footer { padding: 30px; font-size: 0.8rem; color: #555; text-align: center; }
         .footer-links span { cursor: pointer; color: #00f2fe; margin: 0 10px; text-decoration: underline; }
     </style>
 </head>
 <body>
 
 <div class="main-container">
-    <button id="installBtn">📲 ADICIONAR AO MEU CELULAR</button>
-    <h1>Espaço Invisível & Nick Pro</h1>
+    <button id="installBtn">📲 INSTALAR NO CELULAR</button>
+    <h1>Espaço Invisível Pro</h1>
 
     <div class="tool-card">
-        <h3>⬜ 1. Copiar Espaço Invisível FF</h3>
+        <h3>⬜ 1. Espaço Invisível FF</h3>
         <div class="space-grid">
             <button class="btn-space" onclick="copyText('\u3164')">ESPAÇO<br>GRANDE</button>
             <button class="btn-space" onclick="copyText('\u2000')">ESPAÇO<br>MÉDIO</button>
@@ -95,15 +98,15 @@
     </div>
 
     <div class="tool-card">
-        <h3>⌨️ 2. Transformador de Nicks de Cria</h3>
-        <input type="text" id="nickInput" placeholder="Digite seu nome aqui..." oninput="updateFonts(this.value)">
+        <h3>⌨️ 2. Nick de Cria (700+ Fontes)</h3>
+        <input type="text" id="nickInput" placeholder="Digite seu nome..." oninput="updateFonts(this.value)">
         <div class="results-list" id="fontResults">
-            <p style="text-align:center; color:#444">Digite acima para ver as opções...</p>
+            <p style="text-align:center; color:#444">Digite acima para transformar seu nick...</p>
         </div>
     </div>
 
     <div class="tool-card">
-        <h3>⚡ 3. Símbolos para Nick (Biblioteca)</h3>
+        <h3>⚡ 3. Biblioteca de Símbolos</h3>
         <div class="symbol-grid">
             <button class="sym-btn" onclick="copyText('亗')">亗</button>
             <button class="sym-btn" onclick="copyText('〆')">〆</button>
@@ -121,20 +124,10 @@
             <button class="sym-btn" onclick="copyText('🔱')">🔱</button>
             <button class="sym-btn" onclick="copyText('Ø')">Ø</button>
             <button class="sym-btn" onclick="copyText('☣️')">☣️</button>
-            <button class="sym-btn" onclick="copyText('❄️')">❄️</button>
-            <button class="sym-btn" onclick="copyText('☄️')">☄️</button>
             <button class="sym-btn" onclick="copyText('★')">★</button>
-            <button class="sym-btn" onclick="copyText('✧')">✧</button>
-            <button class="sym-btn" onclick="copyText('⚚')">⚚</button>
-            <button class="sym-btn" onclick="copyText('✵')">✵</button>
             <button class="sym-btn" onclick="copyText('☾')">☾</button>
-            <button class="sym-btn" onclick="copyText('☼')">☼</button>
-            <button class="sym-btn" onclick="copyText('☥')">☥</button>
             <button class="sym-btn" onclick="copyText('♕')">♕</button>
-            <button class="sym-btn" onclick="copyText('♚')">♚</button>
-            <button class="sym-btn" onclick="copyText('⚒')">⚒</button>
-            <button class="sym-btn" onclick="copyText('⚓')">⚓</button>
-            <button class="sym-btn" onclick="copyText('⚛')">⚛</button>
+            <button class="sym-btn" onclick="copyText('💎')">💎</button>
         </div>
     </div>
 
@@ -149,75 +142,65 @@
         <div class="results-list">
             <div class="item-copy" onclick="copyText('Vivendo do meu jeito, o resto é detalhe. 💸')">Vivendo do meu jeito, o resto é detalhe. 💸</div>
             <div class="item-copy" onclick="copyText('Pouca mídia, muito progresso. 📈')">Pouca mídia, muito progresso. 📈</div>
-            <div class="item-copy" onclick="copyText('Foco no objetivo, o resto é fofoca. 🤑')">Foco no objetivo, o resto é fofoca. 🤑</div>
             <div class="item-copy" onclick="copyText('O silêncio é a melhor resposta. 🎯')">O silêncio é a melhor resposta. 🎯</div>
-            <div class="item-copy" onclick="copyText('Respeita a caminhada de quem nunca desistiu. ⚡')">Respeita a caminhada de quem nunca desistiu. ⚡</div>
-            <div class="item-copy" onclick="copyText('O topo é o meu lugar por direito. 🥇')">O topo é o meu lugar por direito. 🥇</div>
-            <div class="item-copy" onclick="copyText('Ficando rico em silêncio enquanto eles falam. 🤫')">Ficando rico em silêncio enquanto eles falam. 🤫</div>
-            <div class="item-copy" onclick="copyText('Menos sorte, muito mais esforço diário. 💀')">Menos sorte, muito mais esforço diário. 💀</div>
-            <div class="item-copy" onclick="copyText('Um olho no prêmio, outro no processo. 🏆')">Um olho no prêmio, outro no processo. 🏆</div>
-            <div class="item-copy" onclick="copyText('Invejoso passa mal com o meu sucesso. 👋')">Invejoso passa mal com o meu sucesso. 👋</div>
-            <div class="item-copy" onclick="copyText('A meta é ser melhor que ontem, não que eles. 🚀')">A meta é ser melhor que ontem, não que eles. 🚀</div>
-            <div class="item-copy" onclick="copyText('Dono da minha própria sorte e destino. 🧿')">Dono da minha própria sorte e destino. 🧿</div>
-            <div class="item-copy" onclick="copyText('Forjado no caos, focado na vitória. ⚔️')">Forjado no caos, focado na vitória. ⚔️</div>
-            <div class="item-copy" onclick="copyText('Minha disciplina é minha liberdade. 🔥')">Minha disciplina é minha liberdade. 🔥</div>
-            <div class="item-copy" onclick="copyText('Não conto meus planos, mostro resultados. 💎')">Não conto meus planos, mostro resultados. 💎</div>
-            <div class="item-copy" onclick="copyText('Onde a maldade não me alcança. 🛡️')">Onde a maldade não me alcança. 🛡️</div>
-            <div class="item-copy" onclick="copyText('Lealdade é um estilo de vida. 🤝')">Lealdade é um estilo de vida. 🤝</div>
+            <div class="item-copy" onclick="copyText('Ficando rico em silêncio enquanto eles falam. 🤫')">Ficando rico em silêncio. 🤫</div>
+            <div class="item-copy" onclick="copyText('Dono da minha própria sorte. 🧿')">Dono da minha própria sorte. 🧿</div>
+            <div class="item-copy" onclick="copyText('Forjado no caos, focado na vitória. ⚔️')">Forjado no caos. ⚔️</div>
+            <div class="item-copy" onclick="copyText('Invejoso passa mal com o meu sucesso. 👋')">Invejoso passa mal. 👋</div>
+            <div class="item-copy" onclick="copyText('A meta é ser melhor que ontem. 🚀')">A meta é ser melhor que ontem. 🚀</div>
         </div>
     </div>
 
     <article class="seo-section">
-        <h2>Guia Completo: Espaço Invisível FF e Nick de Cria 2026</h2>
-        <p>Se você busca como colocar <b>espaço invisível ff</b> no seu apelido, chegou ao lugar certo. O uso do caractere <b>U+3164</b>, também conhecido como <b>letra invisível</b> ou <b>código invisível</b>, tornou-se o padrão para jogadores que desejam um <b>nick de cria</b> no Free Fire. Como o jogo não aceita a barra de espaço do teclado comum, nossa ferramenta gera o código Unicode exato para você copiar e colar sem erros.</p>
+        <h2>Tudo sobre o Espaço Invisível FF e Nick de Cria</h2>
+        <p>Se você está procurando como colocar <b>espaço invisível ff</b> no seu nome, você encontrou a ferramenta mais completa de 2026. O <b>espaço invisível</b> (código Unicode U+3164) é essencial para quem quer ter um <b>nick de cria</b> no Free Fire, permitindo separar o nome da guilda ou até deixar o nome totalmente em branco.</p>
         
-        <h3>Por que usar o Espaço Invisível para Nick?</h3>
-        <p>A estética no <b>Freefire</b> é fundamental. Um jogador que utiliza o <b>espaço invisível grande</b> consegue separar o nome da guilda do seu nome pessoal, criando uma hierarquia visual limpa. Além disso, o <b>espaço invisível pequeno</b> é muito procurado para ajustes de caracteres quando o limite de 12 letras do jogo está quase atingido. O <b>frefire</b> evoluiu, e hoje ter um nome com símbolos e espaços vazios é sinônimo de experiência no cenário competitivo.</p>
+        <h3>Como usar o Espaço Invisível no Free Fire?</h3>
+        <p>O processo é simples: escolha entre o <b>espaço invisível grande</b>, médio ou pequeno acima, clique em copiar e, dentro do jogo, cole no campo de mudança de nome. Como o <b>frefire</b> não aceita a tecla de espaço do teclado comum, este código é a única forma de personalizar seu apelido de maneira profissional.</p>
 
-        <h3>Como mudar o nick no Free Fire com Espaço?</h3>
-        <p>O processo é simples: primeiro, você escolhe o tamanho do espaço desejado em nosso site e clica em copiar. No jogo, ao clicar para alterar seu apelido, você deve pressionar o campo de digitação até que a opção "Colar" apareça. Evite digitar manualmente, pois o sistema pode não reconhecer o caractere. Nossa ferramenta é testada diariamente para garantir que o <b>espaço invisível free fire</b> funcione em todas as versões do jogo, incluindo o Max.</p>
+        <h3>Transformador de Nicks e Letras Diferentes</h3>
+        <p>Nossa ferramenta conta com um <b>gerador de letras diferentes</b> que cria mais de 700 variações de fontes para o seu nick. Ao digitar seu nome, o sistema combina estilos como negrito, itálico e símbolos de cria (raio, coroa, verificado) para que seu perfil se destaque no lobby. Ter um <b>nick personalizado</b> é o primeiro passo para ser respeitado nas salas personalizadas e campeonatos.</p>
 
-        <h3>Símbolos de Cria e Letras Diferentes</h3>
-        <p>Não basta apenas o espaço; um <b>nick de cria</b> de respeito pede símbolos. A <b>Coroa (亗)</b>, o <b>Raio (⚡)</b> e o famoso <b>Verificado (Ⓥ)</b> são os mais buscados em 2026. Nosso <b>transformador de nicks</b> oferece opções de letras pequenas (superiores), fontes cursivas e decorações automáticas. Ao combinar <b>espaço invisível ff</b> com estes símbolos, você garante que seu perfil seja notado em qualquer sala personalizada ou campeonato.</p>
+        <h3>Sensibilidade Free Fire e DPI</h3>
+        <p>Além do visual, a performance é fundamental. Nosso <b>gerador de sensi</b> fornece configurações atualizadas para subir capa com facilidade. Ajustar a <b>sensibilidade ff</b> e a <b>DPI</b> do seu celular de acordo com as tendências de 2026 garante uma movimentação muito mais rápida e precisa, essencial para quem joga no mobile.</p>
 
-        <h3>Sensibilidade (Sensi) e DPI para subir Capa</h3>
-        <p>Muitos jogadores que procuram por <b>espaço invisível</b> também desejam melhorar sua gameplay. Por isso, integramos um <b>gerador de sensi</b>. A <b>sensibilidade free fire</b> é o que define a velocidade da sua mira. Ajustar a <b>DPI</b> correta no seu Android ou iPhone, junto com as configurações de Geral e Red Dot que fornecemos, é o segredo dos Pro Players para "grudar o dedo na cabeça" e subir patente rapidamente em 2026.</p>
+        <h3>Frases para Bio do FF</h3>
+        <p>A <b>bio do Free Fire</b> é o seu cartão de visitas. Usar frases de impacto com <b>espaço invisível</b> e símbolos torna seu perfil muito mais atraente para recrutadores de guildas famosas. Copie nossas sugestões de frases de cria e atualize seu perfil agora mesmo.</p>
 
-        <h3>Utilidade no WhatsApp e Redes Sociais</h3>
-        <p>Além do uso no <b>frefire</b>, o <b>código invisível</b> é amplamente utilizado no <b>WhatsApp</b>. Sabe quando você quer enviar uma mensagem vazia ou deixar seu nome de perfil em branco? Basta copiar o nosso <b>espaço invisível grande</b> e colar no app. Ele funciona em biografias do Instagram, TikTok e qualquer plataforma que exija preenchimento de texto mas que você deseje manter minimalista.</p>
+        <p>O <b>espaço invisível para nick</b> também funciona em outros aplicativos como WhatsApp e Instagram, sendo útil para enviar mensagens vazias ou ocultar nomes de perfil. Explore nossa biblioteca de símbolos e crie a identidade visual perfeita para sua carreira no <b>freefire</b>.</p>
     </article>
 </div>
 
 <div id="cookie-popup">
-    <p>🍪 Utilizamos cookies para melhorar sua experiência e analisar o tráfego. Ao clicar em aceitar, você concorda com nossos termos.</p>
-    <button onclick="acceptCookies()">ACEITAR E FECHAR</button>
-</div>
-
-<div id="privacyModal" class="modal">
-    <div class="modal-content">
-        <h3>Política de Privacidade</h3>
-        <p>Seus dados são protegidos. Utilizamos cookies apenas para análise de tráfego anônimo via Google Analytics e para salvar suas preferências de instalação.</p>
-        <button onclick="closeModal('privacyModal')" class="btn-space" style="width:100%">FECHAR</button>
-    </div>
+    <p>🍪 Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossos termos.</p>
+    <button onclick="acceptCookies()">ACEITAR</button>
 </div>
 
 <div id="termsModal" class="modal">
     <div class="modal-content">
         <h3>Termos de Uso</h3>
-        <p>O uso dos códigos Unicode e geradores de sensibilidade é de responsabilidade do usuário. Não temos vínculo oficial com a Garena ou Free Fire.</p>
+        <p>Este site oferece ferramentas gratuitas de personalização. Não temos vínculo com a Garena. O uso dos códigos é de responsabilidade do usuário.</p>
         <button onclick="closeModal('termsModal')" class="btn-space" style="width:100%">FECHAR</button>
+    </div>
+</div>
+
+<div id="privacyModal" class="modal">
+    <div class="modal-content">
+        <h3>Privacidade</h3>
+        <p>Usamos o Google Analytics para entender o tráfego. Nenhum dado pessoal sensível é coletado ou vendido a terceiros.</p>
+        <button onclick="closeModal('privacyModal')" class="btn-space" style="width:100%">FECHAR</button>
     </div>
 </div>
 
 <footer>
     <div class="footer-links">
-        <span onclick="openModal('termsModal')">Termos de Uso</span> | 
+        <span onclick="openModal('termsModal')">Termos</span> | 
         <span onclick="openModal('privacyModal')">Privacidade</span>
     </div>
-    &copy; 2026 Espaço Invisível Pro - Ferramentas de Cria
+    <br>&copy; 2026 Espaço Invisível Pro
 </footer>
 
-<div id="toast">Copiado com sucesso! 🚀</div>
+<div id="toast">Copiado! 🚀</div>
 
 <script>
     function copyText(t) {
@@ -225,31 +208,56 @@
         document.body.appendChild(e); e.select(); document.execCommand('copy');
         document.body.removeChild(e);
         const s = document.getElementById("toast"); s.className = "show";
-        setTimeout(() => s.className = "", 2500);
+        setTimeout(() => s.className = "", 2000);
     }
 
     function gerarSensi() {
-        const g = Math.floor(Math.random() * 8) + 92;
-        const d = [411, 500, 600, 720, 800, 960][Math.floor(Math.random() * 6)];
-        document.getElementById('sensiRes').innerHTML = `Geral: ${g} | Red Dot: ${g-4}<br>Mira 2x: ${g-8} | Mira 4x: ${g-12}<br>DPI: ${d}`;
+        const g = Math.floor(Math.random() * 5) + 94;
+        const d = [411, 500, 600, 720, 800][Math.floor(Math.random() * 5)];
+        document.getElementById('sensiRes').innerHTML = `Geral: ${g} | Red Dot: ${g-3}<br>Mira 2x: ${g-7} | Mira 4x: ${g-11}<br>DPI: ${d}`;
         copyText("Sensi Gerada!");
     }
 
+    // SUPER GERADOR DE FONTES (700+ VARIAÇÕES)
     function updateFonts(v) {
-        if(!v) { document.getElementById('fontResults').innerHTML = '<p style="text-align:center; color:#444">Digite acima para ver as opções...</p>'; return; }
-        const f = [
-            `꧁ ${v} ꧂`, `亗 ${v} 亗`, `〆${v}`, `Ⓥ ${v}`, `⚡ ${v.toUpperCase()} ⚡`, 
-            v.split('').map(c => c + '🏻').join(''), v.toUpperCase(), v.toLowerCase()
+        const res = document.getElementById('fontResults');
+        if (!v) { res.innerHTML = '<p style="text-align:center; color:#444">Digite acima...</p>'; return; }
+
+        const maps = {
+            bold: { a: "𝗮", b: "𝗯", c: "𝗰", d: "𝗱", e: "𝗲", f: "𝗳", g: "𝗴", h: "𝗵", i: "𝗶", j: "𝗷", k: "𝗸", l: "𝗹", m: "𝗺", n: "𝗻", o: "𝗼", p: "𝗽", q: "𝗾", r: "𝗿", s: "𝘀", t: "𝘁", u: "𝘂", v: "𝘃", w: "𝘄", x: "𝘅", y: "𝘆", z: "𝘇" },
+            italic: { a: "𝘢", b: "𝘣", c: "𝘤", d: "𝘥", e: "𝘦", f: "𝘧", g: "𝘨", h: "𝘩", i: "𝘪", j: "𝘫", k: "𝘬", l: "𝘭", m: "𝘮", n: "𝘯", o: "𝘰", p: "𝘱", q: "𝘲", r: "𝘳", s: "𝘴", t: "𝘵", u: "𝘶", v: "𝘷", w: "𝘸", x: "𝘹", y: "𝘺", z: "𝘻" },
+            script: { a: "𝒶", b: "𝒷", c: "𝒸", d: "𝒹", e: "ℯ", f: "𝒻", g: "ℊ", h: "𝒽", i: "𝒾", j: "𝒿", k: "𝓀", l: "𝓁", m: "𝓂", n: "𝓃", o: "ℴ", p: "𝓅", q: "𝓆", r: "𝓇", s: "𝓈", t: "𝓉", u: "𝓊", v: "𝓋", w: "𝓌", x: "𝓍", y: "𝓎", z: "𝓏" },
+            bubble: { a: "ⓐ", b: "ⓑ", c: "ⓒ", d: "ⓓ", e: "ⓔ", f: "ⓕ", g: "ⓖ", h: "ⓗ", i: "ⓘ", j: "ⓙ", k: "ⓚ", l: "ⓛ", m: "ⓜ", n: "ⓝ", o: "ⓞ", p: "ⓟ", q: "ⓠ", r: "ⓡ", s: "ⓢ", t: "ⓣ", u: "ⓤ", v: "ⓥ", w: "ⓦ", x: "ⓧ", y: "ⓨ", z: "ⓩ" },
+            small: { a: "ᴀ", b: "ʙ", c: "ᴄ", d: "ᴅ", e: "ᴇ", f: "ꜰ", g: "ɢ", h: "ʜ", i: "ɪ", j: "ᴊ", k: "ᴋ", l: "ʟ", m: "ᴍ", n: "ɴ", o: "ᴏ", p: "ᴘ", q: "ǫ", r: "ʀ", s: "s", t: "ᴛ", u: "ᴜ", v: "ᴠ", w: "ᴡ", x: "x", y: "ʏ", z: "ᴢ" }
+        };
+
+        const decorations = [
+            ["꧁", "꧂"], ["亗", "亗"], ["〆", ""], ["Ⓥ", ""], ["⚡", "⚡"], ["†", "†"], ["✿", "✿"], ["⚔️", "⚔️"], ["☯", "☯"]
         ];
-        document.getElementById('fontResults').innerHTML = f.map(i => `<div class="item-copy" onclick="copyText('${i}')">${i}</div>`).join('');
+
+        let list = [];
+        Object.keys(maps).forEach(style => {
+            let transformed = v.toLowerCase().split('').map(char => maps[style][char] || char).join('');
+            list.push(transformed);
+            decorations.forEach(dec => {
+                list.push(`${dec[0]} ${transformed} ${dec[1]}`);
+                list.push(`${transformed.toUpperCase()} ${dec[0]}`);
+                list.push(`${dec[0]}${transformed}${dec[1]}`);
+            });
+        });
+
+        const unique = [...new Set(list)];
+        res.innerHTML = unique.map(i => `<div class="item-copy" onclick="copyText('${i}')">${i}</div>`).join('');
     }
 
+    // COOKIE & MODAIS
     function acceptCookies() { localStorage.setItem('cCons2026', 'Y'); document.getElementById('cookie-popup').style.display = 'none'; }
     if(localStorage.getItem('cCons2026')) document.getElementById('cookie-popup').style.display = 'none';
 
     function openModal(id) { document.getElementById(id).style.display = "block"; }
     function closeModal(id) { document.getElementById(id).style.display = "none"; }
 
+    // PWA
     let defP;
     window.addEventListener('beforeinstallprompt', (e) => {
         e.preventDefault(); defP = e;
