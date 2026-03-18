@@ -259,27 +259,41 @@
     function openModal(id) { document.getElementById(id).style.display = "block"; }
     function closeModal(id) { document.getElementById(id).style.display = "none"; }
 
-    // SERVICE WORKER & PWA
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js');
-      });
-    }
-
-    let deferredPrompt;
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        document.getElementById('installBtn').style.display = 'block';
+    // --- SERVICE WORKER & PWA ---
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        // Usando ./ para garantir que encontre o arquivo no GitHub Pages
+        navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('SW ativo!'))
+            .catch(err => console.log('Erro no SW:', err));
     });
+}
 
-    document.getElementById('installBtn').addEventListener('click', () => {
-        if (deferredPrompt) {
-            deferredPrompt.prompt();
-            deferredPrompt = null;
-            document.getElementById('installBtn').style.display = 'none';
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+
+// Captura o evento de instalação
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'block'; 
+});
+
+// FORÇA o botão a aparecer após 3 segundos (Caso o navegador demore a responder)
+setTimeout(() => {
+    installBtn.style.display = 'block';
+}, 3000);
+
+installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+            installBtn.style.display = 'none';
         }
-    });
-</script>
-</body>
-</html>
+        deferredPrompt = null;
+    } else {
+        // Se o navegador bloqueou o prompt automático, ensina o manual
+        alert("Para instalar:\n1. Clique nos 3 pontinhos do navegador\n2. Selecione 'Instalar Aplicativo' ou 'Adicionar à tela de início'");
+    }
+});
