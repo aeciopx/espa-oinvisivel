@@ -2,7 +2,7 @@
   "name": "Espaço Invisível Pro",
   "short_name": "Espaço Pro",
   "description": "Gerador de Espaço Invisível e Nicks de Cria para Free Fire",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#0f0c29",
   "theme_color": "#00f2fe",
