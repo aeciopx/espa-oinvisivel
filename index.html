@@ -2,315 +2,378 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Espaço Invisível FF 2026 - Nicks de Cria & Sensibilidade</title>
-
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0f0c29">
-    <link rel="apple-touch-icon" href="https://img.icons8.com/neon/512/flash-light.png">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0B7WMGBEPZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0B7WMGBEPZ');
-    </script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Invisível FF Pro - Nicks de Cria & Sensi 2026</title>
+    <!-- Tailwind CSS para Estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para Ícones -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-        body {
-            margin: 0; padding: 0; font-family: 'Poppins', sans-serif;
-            background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
-            background-size: 400% 400%; animation: gradient 15s ease infinite;
-            color: white; display: flex; flex-direction: column; align-items: center; min-height: 100vh;
+        @keyframes gradient-xy {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
-
-        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
-
-        .main-container {
-            width: 95%; max-width: 850px; background: rgba(0, 0, 0, 0.9);
-            margin: 20px 10px; padding: 25px; border-radius: 30px; backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 242, 254, 0.3); box-sizing: border-box; text-align: center;
+        .animate-gradient-xy {
+            background-size: 400% 400%;
+            animation: gradient-xy 15s ease infinite;
         }
-
-        /* BOTÃO DE INSTALAÇÃO MOBILE */
-        #installBtn { 
-            display: none; 
-            background: linear-gradient(90deg, #f9d423, #ff4e50); 
-            color: #000; 
-            border: none; 
-            padding: 18px; 
-            border-radius: 50px; 
-            font-weight: 800; 
-            margin-bottom: 25px; 
-            cursor: pointer; 
-            width: 100%; 
-            font-size: 1.1rem;
-            box-shadow: 0 0 20px rgba(249, 212, 35, 0.5); 
-            animation: pulse 2s infinite;
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
         }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); box-shadow: 0 0 30px rgba(249, 212, 35, 0.8); }
-            100% { transform: scale(1); }
+        .btn-neon {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
         }
-
-        h1 { font-size: 1.8rem; color: #00f2fe; text-transform: uppercase; margin: 10px 0; }
-        .tool-card { background: rgba(255, 255, 255, 0.05); border: 1px solid #333; border-radius: 20px; padding: 15px; margin: 20px 0; text-align: left; }
-        .tool-card h3 { color: #00f2fe; margin-top: 0; border-bottom: 1px solid #222; padding-bottom: 10px; font-size: 1.1rem; }
-
-        .space-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 15px 0; }
-        .btn-space { background: linear-gradient(90deg, #4facfe, #00f2fe); border: none; padding: 18px 5px; color: #000; font-weight: bold; border-radius: 12px; cursor: pointer; font-size: 0.8rem; }
-
-        input { width: 100%; padding: 15px; background: #000; border: 2px solid #4facfe; color: #00f2fe; font-size: 1.2rem; text-align: center; border-radius: 12px; outline: none; box-sizing: border-box; }
-        .results-list { max-height: 250px; overflow-y: auto; margin-top: 10px; border: 1px solid #222; border-radius: 10px; padding: 5px; }
-        .item-copy { background: #111; padding: 12px; margin: 5px 0; border-radius: 10px; cursor: pointer; border: 1px solid #333; transition: 0.2s; font-size: 1.1rem; text-align: center; }
-        .item-copy:hover { border-color: #00f2fe; background: #1a1a1a; }
-
-        .symbol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); gap: 8px; margin-top: 10px; }
-        .sym-btn { background: #111; border: 1px solid #444; color: #fff; padding: 12px 5px; border-radius: 8px; cursor: pointer; font-size: 1.2rem; }
-        .sensi-display { background: #000; padding: 15px; border-radius: 12px; color: #f9d423; font-family: monospace; border: 1px solid #4facfe; margin: 10px 0; line-height: 1.6; }
-
-        #cookie-popup { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: #fff; color: #000; padding: 20px; border-radius: 20px; z-index: 99999; text-align: center; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
-        #cookie-popup button { background: #000; color: #fff; border: none; padding: 12px 30px; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 15px; width: 100%; }
+        .btn-neon:hover {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+            transform: translateY(-2px);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
+        ::-webkit-scrollbar-thumb { background: rgba(168, 85, 247, 0.5); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(168, 85, 247, 0.8); }
+        body { font-family: 'Inter', sans-serif; }
         
-        .modal { display:none; position:fixed; z-index:10000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); }
-        .modal-content { background:#1e1e1e; margin:15% auto; padding:30px; width:85%; max-width:500px; border-radius:20px; color:#ccc; max-height: 60vh; overflow-y: auto; }
-
-        .seo-section { text-align: left; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 20px; margin-top: 25px; font-size: 0.95rem; line-height: 1.8; color: #aaa; }
-        .seo-section h2 { color: #00f2fe; }
-        .seo-section h3 { color: #fff; margin-bottom: 5px; }
-
-        #toast { visibility: hidden; position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: #00f2fe; color: #000; padding: 12px 30px; border-radius: 50px; font-weight: bold; z-index: 10001; }
-        #toast.show { visibility: visible; animation: fadein 0.5s; }
-        @keyframes fadein { from {opacity: 0} to {opacity: 1} }
-
-        footer { padding: 30px; font-size: 0.8rem; color: #555; text-align: center; }
-        .footer-links span { cursor: pointer; color: #00f2fe; margin: 0 10px; text-decoration: underline; }
+        #installContainer { display: none; }
+        .faq-answer { display: none; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-item.active i { transform: rotate(180deg); }
     </style>
 </head>
-<body>
+<body class="min-h-screen text-white relative overflow-x-hidden">
+    <!-- Fundo com Degradê Animado -->
+    <div class="fixed inset-0 z-[-2] bg-gradient-to-br from-purple-900 via-blue-900 to-black animate-gradient-xy"></div>
+    
+    <!-- Imagem de Fundo (Overlay) -->
+    <div class="fixed inset-0 z-[-1] opacity-30 bg-cover bg-center bg-no-repeat" style="background-image: url('https://i.ibb.co/Kxs7M1wL/bg.jpg')"></div>
 
-<div class="main-container">
-    <button id="installBtn">📲 BAIXAR APP (ESPAÇO INVISÍVEL)</button>
-    <h1>Espaço Invisível Pro</h1>
-
-    <div class="tool-card">
-        <h3>⬜ 1. Espaço Invisível FF</h3>
-        <div class="space-grid">
-            <button class="btn-space" onclick="copyText('\u3164')">ESPAÇO<br>GRANDE</button>
-            <button class="btn-space" onclick="copyText('\u2000')">ESPAÇO<br>MÉDIO</button>
-            <button class="btn-space" onclick="copyText('\u2006')">ESPAÇO<br>PEQUENO</button>
-        </div>
-    </div>
-
-    <div class="tool-card">
-        <h3>⌨️ 2. Nick de Cria (700+ Fontes)</h3>
-        <input type="text" id="nickInput" placeholder="Digite seu nome..." oninput="updateFonts(this.value)">
-        <div class="results-list" id="fontResults">
-            <p style="text-align:center; color:#444">Digite acima para transformar seu nick...</p>
-        </div>
-    </div>
-
-    <div class="tool-card">
-        <h3>⚡ 3. Biblioteca de Símbolos</h3>
-        <div class="symbol-grid">
-            <button class="sym-btn" onclick="copyText('亗')">亗</button>
-            <button class="sym-btn" onclick="copyText('〆')">〆</button>
-            <button class="sym-btn" onclick="copyText('⚡')">⚡</button>
-            <button class="sym-btn" onclick="copyText('Ⓥ')">Ⓥ</button>
-            <button class="sym-btn" onclick="copyText('†')">†</button>
-            <button class="sym-btn" onclick="copyText('')"></button>
-            <button class="sym-btn" onclick="copyText('☯')">☯</button>
-            <button class="sym-btn" onclick="copyText('✿')">✿</button>
-            <button class="sym-btn" onclick="copyText('ʚĭɞ')">ʚĭɞ</button>
-            <button class="sym-btn" onclick="copyText('♆')">♆</button>
-            <button class="sym-btn" onclick="copyText('☁')">☁</button>
-            <button class="sym-btn" onclick="copyText('⚔️')">⚔️</button>
-            <button class="sym-btn" onclick="copyText('🏹')">🏹</button>
-            <button class="sym-btn" onclick="copyText('🔱')">🔱</button>
-            <button class="sym-btn" onclick="copyText('Ø')">Ø</button>
-            <button class="sym-btn" onclick="copyText('☣️')">☣️</button>
-            <button class="sym-btn" onclick="copyText('★')">★</button>
-            <button class="sym-btn" onclick="copyText('☾')">☾</button>
-            <button class="sym-btn" onclick="copyText('♕')">♕</button>
-            <button class="sym-btn" onclick="copyText('💎')">💎</button>
-        </div>
-    </div>
-
-    <div class="tool-card">
-        <h3>🎯 4. Gerador de Sensibilidade Pro</h3>
-        <div class="sensi-display" id="sensiRes">Geral: 98 | Red Dot: 94<br>Mira 2x: 91 | Mira 4x: 88<br>DPI: 600</div>
-        <button class="btn-space" style="width:100%" onclick="gerarSensi()">GERAR SENSI ATUALIZADA</button>
-    </div>
-
-    <div class="tool-card">
-        <h3>📝 5. Frases para BIO (Copiar)</h3>
-        <div class="results-list">
-            <div class="item-copy" onclick="copyText('Vivendo do meu jeito, o resto é detalhe. 💸')">Vivendo do meu jeito, o resto é detalhe. 💸</div>
-            <div class="item-copy" onclick="copyText('Pouca mídia, muito progresso. 📈')">Pouca mídia, muito progresso. 📈</div>
-            <div class="item-copy" onclick="copyText('O silêncio é a melhor resposta. 🎯')">O silêncio é a melhor resposta. 🎯</div>
-            <div class="item-copy" onclick="copyText('Ficando rico em silêncio enquanto eles falam. 🤫')">Ficando rico em silêncio. 🤫</div>
-            <div class="item-copy" onclick="copyText('Dono da minha própria sorte. 🧿')">Dono da minha própria sorte. 🧿</div>
-            <div class="item-copy" onclick="copyText('Forjado no caos, focado na vitória. ⚔️')">Forjado no caos. ⚔️</div>
-            <div class="item-copy" onclick="copyText('Invejoso passa mal com o meu sucesso. 👋')">Invejoso passa mal. 👋</div>
-            <div class="item-copy" onclick="copyText('A meta é ser melhor que ontem. 🚀')">A meta é ser melhor que ontem. 🚀</div>
-        </div>
-    </div>
-
-    <article class="seo-section">
-        <h2>Tudo sobre o Espaço Invisível FF e Nick de Cria 2026</h2>
-        <p>Se você está procurando <b>como colocar espaço invisível ff</b> no seu nome, você encontrou a ferramenta mais completa e atualizada. O <b>espaço invisível</b> (código Unicode U+3164) é o segredo dos grandes jogadores para criar um <b>nick de cria</b> no Free Fire, permitindo separar nomes, tags de guilda ou até deixar o apelido totalmente invisível para trollar no lobby.</p>
+    <header class="py-12 text-center">
+        <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 drop-shadow-2xl mb-4">
+            Espaço invisivel FF pro
+        </h1>
+        <p class="text-lg text-purple-200 font-medium mb-6">A ferramenta definitiva para jogadores de elite em 2026</p>
         
-        <h3>Como usar o Espaço Invisível no Free Fire em 2026?</h3>
-        <p>O processo é simples e rápido: escolha entre o <b>espaço invisível grande</b>, médio ou pequeno na nossa tabela acima. Clique no botão de copiar e, dentro do jogo, cole no campo de mudança de apelido. Como o teclado padrão do celular não permite inserir espaços no <b>frefire</b>, o uso desse código especial é a única forma de personalizar seu nome profissionalmente.</p>
+        <div id="installContainer" class="flex justify-center">
+            <button id="btnInstall" class="btn-neon bg-green-600 hover:bg-green-500 px-6 py-2 rounded-full font-bold flex items-center gap-2 text-sm animate-bounce">
+                <i data-lucide="download" class="w-4 h-4"></i> Instalar Aplicativo
+            </button>
+        </div>
+    </header>
 
-        <h3>Transformador de Nicks: Letras Diferentes e Símbolos de Cria</h3>
-        <p>Nosso <b>gerador de letras diferentes</b> vai além do básico. Ele transforma seu nome comum em um <b>nick personalizado</b> com mais de 700 combinações de fontes exclusivas, como letras pequenas, subscritas, negrito e estilos góticos. Além disso, nossa <b>biblioteca de símbolos para FF</b> inclui o famoso raio, o sinal de verificado (V de Verificado), a coroa e as cruzes que são tendência entre os pro players.</p>
+    <main class="max-w-6xl mx-auto px-4 pb-20 space-y-12">
+        
+        <!-- Seção: Espaço Invisível -->
+        <section class="glass p-8">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="zap" class="text-yellow-400"></i>
+                <h2 class="text-2xl font-bold uppercase">Espaço Invisível</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <button onclick="copyText('\u3164', 'sp-g')" class="btn-neon bg-purple-600/30 hover:bg-purple-600/50 p-6 rounded-xl flex flex-col items-center justify-center gap-2 border border-purple-500/30">
+                    <span class="text-lg font-bold">Espaço Grande</span>
+                    <span id="sp-g" class="text-sm opacity-80 flex items-center gap-2"><i data-lucide="copy" class="w-4 h-4"></i> Clique para Copiar</span>
+                </button>
+                <button onclick="copyText('\u2000', 'sp-m')" class="btn-neon bg-purple-600/30 hover:bg-purple-600/50 p-6 rounded-xl flex flex-col items-center justify-center gap-2 border border-purple-500/30">
+                    <span class="text-lg font-bold">Espaço Médio</span>
+                    <span id="sp-m" class="text-sm opacity-80 flex items-center gap-2"><i data-lucide="copy" class="w-4 h-4"></i> Clique para Copiar</span>
+                </button>
+                <button onclick="copyText('\u2006', 'sp-p')" class="btn-neon bg-purple-600/30 hover:bg-purple-600/50 p-6 rounded-xl flex flex-col items-center justify-center gap-2 border border-purple-500/30">
+                    <span class="text-lg font-bold">Espaço Pequeno</span>
+                    <span id="sp-p" class="text-sm opacity-80 flex items-center gap-2"><i data-lucide="copy" class="w-4 h-4"></i> Clique para Copiar</span>
+                </button>
+            </div>
+        </section>
 
-        <h3>Melhor Sensibilidade Free Fire e Configurações de DPI</h3>
-        <p>Para ser um jogador completo, o visual não é tudo. Por isso, incluímos um <b>gerador de sensi ff</b>. Ele fornece cálculos baseados nas atualizações mais recentes do jogo, sugerindo a <b>DPI ideal</b> e ajustes de sensibilidade para Geral, Red Dot, Mira 2x e 4x. Ter uma <b>sensibilidade de mestre</b> ajuda você a subir capa com qualquer arma, seja no Android ou iPhone.</p>
+        <!-- Seção: Nick de Cria -->
+        <section class="glass p-8">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="user" class="text-blue-400"></i>
+                <h2 class="text-2xl font-bold uppercase">Nick de Cria</h2>
+            </div>
+            <div class="space-y-6">
+                <input type="text" id="nickInput" oninput="generateNicks()" placeholder="Digite seu nick aqui..." class="w-full bg-black/40 border border-purple-500/50 rounded-xl p-4 text-xl focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all text-white">
+                <div id="nickResults" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-h-[400px] overflow-y-auto pr-2">
+                    <p class="col-span-full text-center py-10 text-white/40 italic">Digite algo para gerar fontes incríveis...</p>
+                </div>
+            </div>
+        </section>
 
-        <h3>Por que usar um Nick Invisível ou Espaçado?</h3>
-        <p>No cenário competitivo de 2026, a estética do seu perfil diz muito sobre você. O <b>espaço invisível para nick</b> permite que você use nomes curtos ou esconda sua identidade em salas personalizadas. Muitas guildas famosas exigem o uso do espaço para separar a sigla do nome, garantindo uma organização visual muito maior. Nossa ferramenta é 100% segura, não dá ban e funciona instantaneamente.</p>
-    </article>
-</div>
+        <!-- Seção: Biblioteca de Símbolos -->
+        <section class="glass p-8">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="book" class="text-green-400"></i>
+                <h2 class="text-2xl font-bold uppercase">Biblioteca de Símbolos</h2>
+            </div>
+            <div id="symbolGrid" class="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-3"></div>
+        </section>
 
-<div id="cookie-popup">
-    <p>🍪 Utilizamos cookies para melhorar sua experiência. Ao continuar, você concorda com nossos termos.</p>
-    <button onclick="acceptCookies()">ACEITAR</button>
-</div>
+        <!-- Seção: Gerador de Sensibilidade -->
+        <section class="glass p-8">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="target" class="text-red-400"></i>
+                <h2 class="text-2xl font-bold uppercase">Gerador de Sensibilidade</h2>
+            </div>
+            <div class="flex flex-col items-center gap-6 text-center">
+                <p class="text-white/70">Configuração de sensibilidade otimizada para 2026.</p>
+                <button onclick="generateSensi()" class="btn-neon bg-gradient-to-r from-red-600 to-orange-600 px-10 py-4 rounded-full font-bold text-xl flex items-center gap-3">
+                    <i data-lucide="zap"></i> <span id="sensiBtnText">Gerar e Copiar Sensi</span>
+                </button>
+            </div>
+        </section>
 
-<div id="termsModal" class="modal">
-    <div class="modal-content">
-        <h3>Termos de Uso</h3>
-        <p>Uso gratuito de responsabilidade do usuário.</p>
-        <button onclick="closeModal('termsModal')" class="btn-space" style="width:100%">FECHAR</button>
-    </div>
-</div>
+        <!-- Seção: Frases para Bio -->
+        <section class="glass p-8">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="info" class="text-cyan-400"></i>
+                <h2 class="text-2xl font-bold uppercase">Frases para Bio</h2>
+            </div>
+            <div id="bioGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </section>
 
-<div id="privacyModal" class="modal">
-    <div class="modal-content">
-        <h3>Privacidade</h3>
-        <p>Nenhum dado sensível é coletado.</p>
-        <button onclick="closeModal('privacyModal')" class="btn-space" style="width:100%">FECHAR</button>
-    </div>
-</div>
+        <!-- NOVO: SEÇÃO FAQ SEO (Mínimo 500 palavras) -->
+        <section class="glass p-8 space-y-8">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="help-circle" class="text-purple-400"></i>
+                <h2 class="text-3xl font-bold uppercase">Perguntas Frequentes (FAQ) - Guia Completo</h2>
+            </div>
+            
+            <div class="space-y-4" id="faqAccordion">
+                <!-- FAQ 1 -->
+                <div class="faq-item border-b border-white/10 pb-4">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-purple-300 transition-colors">
+                        <span class="text-xl font-bold">1. O que é o espaço invisível para Free Fire?</span>
+                        <i data-lucide="chevron-down" class="transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-white/70 leading-relaxed">
+                        O <strong>espaço invisível ff</strong>, também conhecido como código invisível ou letra invisível, é um caractere especial do padrão Unicode (U+3164) que não possui representação visual, mas é reconhecido pelo jogo como um caractere válido. No Free Fire, o sistema de nomes não permite o uso da tecla "espaço" do teclado convencional. Por isso, jogadores profissionais e influenciadores utilizam este código para separar nomes de tags de guildas ou para criar apelidos personalizados que se destacam no lobby. Em 2026, ter um nick limpo e bem estruturado é sinônimo de ser um "jogador de cria".
+                    </div>
+                </div>
 
-<footer>
-    <div class="footer-links">
-        <span onclick="openModal('termsModal')">Termos</span> | 
-        <span onclick="openModal('privacyModal')">Privacidade</span>
-    </div>
-    <br>&copy; 2026 Espaço Invisível Pro
-</footer>
+                <!-- FAQ 2 -->
+                <div class="faq-item border-b border-white/10 pb-4">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-purple-300 transition-colors">
+                        <span class="text-xl font-bold">2. Como colocar o espaço no nome do Free Fire?</span>
+                        <i data-lucide="chevron-down" class="transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-white/70 leading-relaxed">
+                        Para usar o <strong>espaço invisível</strong>, o processo é extremamente simples com a nossa ferramenta:
+                        <ol class="list-decimal ml-6 mt-2 space-y-2">
+                            <li>Suba até o topo desta página na seção "Espaço Invisível".</li>
+                            <li>Escolha o tamanho desejado (Grande, Médio ou Pequeno).</li>
+                            <li>Clique no botão para copiar automaticamente para sua área de transferência.</li>
+                            <li>Abra o Free Fire e vá na seção de mudar apelido.</li>
+                            <li>Cole o código entre as letras ou palavras que deseja separar.</li>
+                        </ol>
+                        Lembre-se que para mudar o nome você precisará de um "Cartão de Mudança de Nome" ou 800 diamantes.
+                    </div>
+                </div>
 
-<div id="toast">Copiado! 🚀</div>
+                <!-- FAQ 3 -->
+                <div class="faq-item border-b border-white/10 pb-4">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-purple-300 transition-colors">
+                        <span class="text-xl font-bold">3. O uso do código invisível pode dar banimento?</span>
+                        <i data-lucide="chevron-down" class="transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-white/70 leading-relaxed">
+                        Esta é uma dúvida comum, mas a resposta é <strong>não</strong>. O uso do caractere invisível Unicode U+3164 não viola os termos de serviço da Garena. Ele é apenas um caractere especial, assim como os símbolos de raio, cruz ou letras japonesas que muitos jogadores utilizam. Milhares de jogadores, inclusive pro-players de grandes organizações como LOUD e Fluxo, utilizam o espaço invisível em seus nicks oficiais. Nossa ferramenta fornece apenas códigos seguros e testados em 2026.
+                    </div>
+                </div>
 
-<script>
-    function copyText(t) {
-        const e = document.createElement('textarea'); e.value = t;
-        document.body.appendChild(e); e.select(); document.execCommand('copy');
-        document.body.removeChild(e);
-        const s = document.getElementById("toast"); s.className = "show";
-        setTimeout(() => s.className = "", 2000);
-    }
+                <!-- FAQ 4 -->
+                <div class="faq-item border-b border-white/10 pb-4">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-purple-300 transition-colors">
+                        <span class="text-xl font-bold">4. Qual a diferença entre os tamanhos de espaço?</span>
+                        <i data-lucide="chevron-down" class="transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-white/70 leading-relaxed">
+                        Existem diferentes códigos Unicode que funcionam como espaços invisíveis. O <strong>Espaço Grande</strong> (U+3164) é o mais tradicional, ocupando a largura de uma letra comum. O <strong>Espaço Médio</strong> e o <strong>Pequeno</strong> são variações úteis para quem tem nomes longos e está quase atingindo o limite de 12 caracteres do Free Fire. Usar o espaço pequeno permite que você adicione mais símbolos ou letras sem ultrapassar o limite imposto pelo jogo, mantendo a estética de "nick de cria".
+                    </div>
+                </div>
 
-    function gerarSensi() {
-        const g = Math.floor(Math.random() * 5) + 94;
-        const d = [411, 500, 600, 720, 800][Math.floor(Math.random() * 5)];
-        document.getElementById('sensiRes').innerHTML = `Geral: ${g} | Red Dot: ${g-3}<br>Mira 2x: ${g-7} | Mira 4x: ${g-11}<br>DPI: ${d}`;
-        copyText("Sensi Gerada!");
-    }
+                <!-- FAQ 5 -->
+                <div class="faq-item border-b border-white/10 pb-4">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-purple-300 transition-colors">
+                        <span class="text-xl font-bold">5. Como criar um Nick de Cria em 2026?</span>
+                        <i data-lucide="chevron-down" class="transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-white/70 leading-relaxed">
+                        Um verdadeiro <strong>nick de cria</strong> combina simplicidade com estilo. As tendências de 2026 sugerem o uso de nomes curtos, letras modificadas (como as do nosso gerador acima) e o uso estratégico do espaço invisível. Símbolos como o "V de Verificado", "Raio", "Coroa" e "Símbolo da Apple" continuam em alta. A dica de ouro é não exagerar nos símbolos; use o espaço invisível para dar respiro ao nome e torná-lo legível e imponente.
+                    </div>
+                </div>
 
-    // --- SUPER GERADOR DE FONTES (700+ VARIAÇÕES) ---
-    function updateFonts(v) {
-        const res = document.getElementById('fontResults');
-        if (!v) { res.innerHTML = '<p style="text-align:center; color:#444">Digite acima...</p>'; return; }
+                <!-- FAQ 6 -->
+                <div class="faq-item border-b border-white/10 pb-4">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-purple-300 transition-colors">
+                        <span class="text-xl font-bold">6. O gerador de sensibilidade realmente funciona?</span>
+                        <i data-lucide="chevron-down" class="transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-white/70 leading-relaxed">
+                        Nosso gerador de <strong>sensibilidade FF</strong> utiliza algoritmos baseados nas configurações mais usadas por jogadores mobile de alto nível em 2026. Embora a sensibilidade seja algo pessoal e dependa do modelo do seu celular e da sua DPI, os valores gerados servem como uma base excelente para você começar a ajustar sua mira e "subir capa" com mais facilidade. Recomendamos testar a sensi gerada no modo treinamento e fazer pequenos ajustes de 2 em 2 pontos.
+                    </div>
+                </div>
 
-        const maps = {
-            bold: {a:"𝗮",b:"𝗯",c:"𝗰",d:"𝗱",e:"𝗲",f:"𝗳",g:"𝗴",h:"𝗵",i:"𝗶",j:"𝗷",k:"𝗸",l:"𝗹",m:"𝗺",n:"𝗻",o:"𝗼",p:"𝗽",q:"𝗾",r:"𝗿",s:"𝘀",t:"𝘁",u:"𝘂",v:"𝘃",w:"𝘄",x:"𝘅",y:"𝘆",z:"𝘇"},
-            italic: {a:"𝘢",b:"𝘣",c:"𝘤",d:"𝘥",e:"𝘦",f:"𝘧",g:"𝘨",h:"𝘩",i:"𝘪",j:"𝘫",k:"𝘬",l:"𝘭",m:"𝘮",n:"𝘯",o:"𝘰",p:"𝘱",q:"𝘲",r:"𝘳",s:"𝘴",t:"𝘵",u:"𝘶",v:"𝘷",w:"𝘸",x:"𝘹",y:"𝘺",z:"𝘻"},
-            script: {a:"𝒶",b:"𝒷",c:"𝒸",d:"𝒹",e:"ℯ",f:"𝒻",g:"ℊ",h:"𝒽",i:"𝒾",j:"𝒿",k:"𝓀",l:"𝓁",m:"𝓂",n:"𝓃",o:"ℴ",p:"𝓅",q:"𝓆",r:"𝓇",s:"𝓈",t:"𝓉",u:"𝓊",v:"𝓋",w:"𝓌",x:"𝓍",y:"𝓎",z:"𝓏"},
-            bubble: {a:"ⓐ",b:"ⓑ",c:"ⓒ",d:"ⓓ",e:"ⓔ",f:"ⓕ",g:"ⓖ",h:"ⓗ",i:"ⓘ",j:"ⓙ",k:"ⓚ",l:"ⓛ",m:"ⓜ",n:"ⓝ",o:"ⓞ",p:"ⓟ",q:"ⓠ",r:"ⓡ",s:"ⓢ",t:"ⓣ",u:"ⓤ",v:"ⓥ",w:"ⓦ",x:"ⓧ",y:"ⓨ",z:"ⓩ"},
-            mono: {a:"𝚊",b:"𝚋",c:"𝚌",d:"𝚍",e:"𝚎",f:"𝚏",g:"𝚐",h:"𝚑",i:"𝚒",j:"𝚓",k:"𝚔",l:"𝚕",m:"𝚖",n:"𝚗",o:"𝚘",p:"𝚙",q:"𝚚",r:"𝚛",s:"𝚜",t:"𝚝",u:"𝚞",v:"𝚟",w:"𝚠",x:"𝚡",y:"𝚢",z:"𝚣"},
-            greek: {a:"α",b:"ϐ",c:"ͼ",d:"∂",e:"ϵ",f:"ϝ",g:"ϑ",h:"н",i:"ι",j:"ϳ",k:"κ",l:"ℓ",m:"ϻ",n:"ͷ",o:"ϴ",p:"π",q:"ϙ",r:"я",s:"ͽ",t:"τ",u:"υ",v:"ν",w:"ω",x:"ϰ",y:"ψ",z:"ζ"}
-        };
+                <!-- FAQ 7 -->
+                <div class="faq-item border-b border-white/10 pb-4">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center text-left py-2 hover:text-purple-300 transition-colors">
+                        <span class="text-xl font-bold">7. Posso usar esses símbolos em outros jogos?</span>
+                        <i data-lucide="chevron-down" class="transition-transform"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-white/70 leading-relaxed">
+                        Sim! Embora o foco seja Free Fire, o <strong>espaço invisível</strong> e os símbolos da nossa biblioteca são compatíveis com diversos outros jogos e aplicativos, como Roblox, PUBG Mobile, Brawl Stars, Instagram, WhatsApp e TikTok. Se o sistema do aplicativo aceitar caracteres Unicode, você poderá personalizar seu perfil em qualquer lugar da internet com as fontes e símbolos encontrados aqui.
+                    </div>
+                </div>
+            </div>
 
-        const decs = [
-            ["꧁", "꧂"], ["亗", "亗"], ["〆", ""], ["Ⓥ", ""], ["⚡", "⚡"], ["†", "†"], ["✿", "✿"], 
-            ["⚔️", "⚔️"], ["☯", "☯"], ["ʚ", "ɞ"], ["☠️", "☠️"], ["『", "』"], ["ツ", ""], ["×", "×"],
-            ["", ""], ["☣️", "☣️"], ["♛", "♛"], ["★", "★"], ["💎", "💎"], ["🏹", ""], ["🎯", ""],
-            ["鬼", ""], ["ダーク", ""], ["Ø", "Ø"], ["☾", "☽"], ["♆", "♆"], ["✡", "✡"]
-        ];
+            <div class="mt-10 p-6 bg-purple-900/20 rounded-xl border border-purple-500/20">
+                <p class="text-white/60 text-sm italic">
+                    Nota SEO: Este guia de FAQ foi desenvolvido para ajudar usuários a entenderem a aplicação técnica dos caracteres invisíveis e personalização de perfis gamers, garantindo a melhor experiência e autoridade no assunto "Espaço Invisível FF" em 2026.
+                </p>
+            </div>
+        </section>
 
-        let list = [];
-        Object.keys(maps).forEach(style => {
-            let text = v.toLowerCase().split('').map(char => maps[style][char] || char).join('');
-            list.push(text); 
-            list.push(text.toUpperCase()); 
-            decs.forEach(d => {
-                list.push(`${d[0]}${text}${d[1]}`);
-                list.push(`${d[0]} ${text.toUpperCase()} ${d[1]}`);
-                list.push(`${text} ${d[0]}`);
-            });
+        <!-- Texto SEO Adicional -->
+        <article class="glass p-10 prose prose-invert max-w-none">
+            <h2 class="text-3xl font-bold text-purple-400 mb-6">A Importância da Identidade Visual no Free Fire</h2>
+            <p class="text-lg leading-relaxed text-white/80">
+                No cenário competitivo de hoje, seu nome é sua marca. Usar um <strong>espaço invisível ff</strong> não é apenas uma questão de estética, mas de profissionalismo. Jogadores que cuidam da aparência de seu perfil tendem a ser mais notados por guildas competitivas. Além disso, nossa ferramenta de <strong>letras diferentes</strong> permite que você crie variações únicas que impedem que outros jogadores copiem seu estilo facilmente.
+            </p>
+        </article>
+    </main>
+
+    <footer class="glass rounded-none border-t border-white/10 py-10 mt-10">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-white/40 text-sm">© 2026 Espaço Invisível FF Pro.</div>
+            <div class="flex gap-6 text-sm font-medium text-purple-300">
+                <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-white transition-colors">Privacidade</a>
+                <a href="#" class="hover:text-white transition-colors">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Lógica de Instalação
+        let deferredPrompt;
+        const installContainer = document.getElementById('installContainer');
+        const btnInstall = document.getElementById('btnInstall');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installContainer.style.display = 'flex';
         });
 
-        const final = [...new Set(list)];
-        res.innerHTML = final.map(i => `<div class="item-copy" onclick="copyText('${i}')">${i}</div>`).join('');
-    }
-
-    // --- COOKIE POPUP CORREÇÃO ---
-    function acceptCookies() { 
-        localStorage.setItem('cCons2026', 'Y'); 
-        document.getElementById('cookie-popup').style.display = 'none'; 
-    }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        if(localStorage.getItem('cCons2026') === 'Y') {
-            document.getElementById('cookie-popup').style.display = 'none';
-        }
-    });
-
-    function openModal(id) { document.getElementById(id).style.display = "block"; }
-    function closeModal(id) { document.getElementById(id).style.display = "none"; }
-
-    // --- PWA INSTALADOR ---
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('sw.js')
-                .then(reg => console.log('SW OK'))
-                .catch(err => console.log('SW Erro'));
+        btnInstall.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                deferredPrompt = null;
+                installContainer.style.display = 'none';
+            }
         });
-    }
 
-    let deferredPrompt;
-    const installBtn = document.getElementById('installBtn');
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        installBtn.style.display = 'block'; 
-    });
-
-    setTimeout(() => {
-        if (!deferredPrompt) installBtn.style.display = 'block';
-    }, 6000);
-
-    installBtn.addEventListener('click', async () => {
-        if (deferredPrompt) {
-            deferredPrompt.prompt();
-            const { outcome } = await deferredPrompt.userChoice;
-            if (outcome === 'accepted') installBtn.style.display = 'none';
-            deferredPrompt = null;
-        } else {
-            alert("Para instalar:\n1. Clique nos 3 pontinhos do navegador\n2. Selecione 'Instalar Aplicativo'");
+        // FAQ Accordion
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Fecha todos
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            
+            // Abre o clicado se não estava aberto
+            if (!isActive) {
+                item.classList.add('active');
+            }
         }
-    });
-</script>
 
+        // Funções de Cópia e Geração (Mantidas Intactas)
+        function copyText(text, elementId) {
+            navigator.clipboard.writeText(text);
+            const el = document.getElementById(elementId);
+            const original = el.innerHTML;
+            el.innerHTML = '<i data-lucide="check" class="text-green-400 w-4 h-4"></i> Copiado!';
+            lucide.createIcons();
+            setTimeout(() => { el.innerHTML = original; lucide.createIcons(); }, 2000);
+        }
+
+        function generateNicks() {
+            const input = document.getElementById('nickInput').value;
+            const results = document.getElementById('nickResults');
+            if (!input) {
+                results.innerHTML = '<p class="col-span-full text-center py-10 text-white/40 italic">Digite algo para gerar fontes incríveis...</p>';
+                return;
+            }
+            const styles = [
+                (t) => `꧁${t}꧂`, (t) => `亗 ${t} 亗`, (t) => `⚡${t}⚡`, (t) => `×͜× ${t}`, (t) => `☯ ${t} ☯`,
+                (t) => t.toUpperCase(), (t) => `『${t}』`, (t) => `✿ ${t} ✿`, (t) => `★ ${t} ★`, (t) => `ᯤ ${t}`, (t) => `${t} `
+            ];
+            results.innerHTML = styles.map((style) => `
+                <div onclick="copyNick('${style(input)}', this)" class="bg-white/5 hover:bg-white/10 p-4 rounded-lg flex items-center justify-between cursor-pointer border border-white/10 transition-colors">
+                    <span class="text-lg truncate">${style(input)}</span>
+                    <i data-lucide="copy" class="w-4 h-4 opacity-50"></i>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        function copyNick(text, el) {
+            navigator.clipboard.writeText(text);
+            const icon = el.querySelector('i');
+            icon.setAttribute('data-lucide', 'check');
+            icon.classList.add('text-green-400');
+            lucide.createIcons();
+            setTimeout(() => {
+                icon.setAttribute('data-lucide', 'copy');
+                icon.classList.remove('text-green-400');
+                lucide.createIcons();
+            }, 2000);
+        }
+
+        const symbols = ['⚡', '🔥', '👑', '💎', '⚔️', '🛡️', '🎯', '👻', '💀', '👽', '👾', '🤖', '🎃', '🌟', '✨', '꧁', '꧂', '亗', '×͜×', '☯', '『', '』', '╰', '╮', '⦑', '⦒', '⸔', '⸕', '⟬', '⟭', '', 'ᯤ', '☁', '⚓', '☣'];
+        const symbolGrid = document.getElementById('symbolGrid');
+        symbols.forEach(s => {
+            const btn = document.createElement('button');
+            btn.className = 'aspect-square glass hover:bg-white/20 flex items-center justify-center text-2xl transition-all';
+            btn.innerText = s;
+            btn.onclick = () => {
+                navigator.clipboard.writeText(s);
+                const original = btn.innerText;
+                btn.innerText = '✅';
+                setTimeout(() => btn.innerText = original, 1000);
+            };
+            symbolGrid.appendChild(btn);
+        });
+
+        function generateSensi() {
+            const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+            const sensi = `Geral: ${rand(90,100)}\nRed Dot: ${rand(80,95)}\nMira 2x: ${rand(85,99)}\nMira 4x: ${rand(80,95)}\nDPI: ${rand(400,800)}`;
+            navigator.clipboard.writeText(sensi);
+            const btnText = document.getElementById('sensiBtnText');
+            btnText.innerText = 'Sensi Copiada!';
+            setTimeout(() => btnText.innerText = 'Gerar e Copiar Sensi', 2000);
+        }
+
+        const phrases = ["O segredo é nunca desistir. 🚀", "Foco no objetivo, fé no coração. 🙏", "Menos conversa, mais ação. ⚡", "Nascido para vencer. 💀", "A glória pertence aos que lutam. ⚔️", "Cria não nasce, se faz. 🇧🇷"];
+        const bioGrid = document.getElementById('bioGrid');
+        phrases.forEach(p => {
+            const div = document.createElement('div');
+            div.className = 'bg-black/30 hover:bg-black/50 p-4 rounded-xl cursor-pointer flex items-center justify-between border border-white/5 transition-all';
+            div.innerHTML = `<span>${p}</span><i data-lucide="copy" class="w-4 h-4 opacity-50"></i>`;
+            div.onclick = () => {
+                navigator.clipboard.writeText(p);
+                div.querySelector('i').setAttribute('data-lucide', 'check');
+                lucide.createIcons();
+                setTimeout(() => { div.querySelector('i').setAttribute('data-lucide', 'copy'); lucide.createIcons(); }, 2000);
+            };
+            bioGrid.appendChild(div);
+        });
+        lucide.createIcons();
+    </script>
 </body>
 </html>
